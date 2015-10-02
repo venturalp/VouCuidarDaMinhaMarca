@@ -211,14 +211,18 @@ header {
     }
 
     .menu-mobile {
-        display: block !important;
+/*        display: block !important;*/
         height: auto;
     }
 
     .menu-mobile img{
         display: block !important;
         position: relative;
-        margin: 20px 0 20px 0;
+        margin: 60px 0 60px 0;
+    }
+
+    .btn-menu{
+        display: block !important;
     }
 
 }
@@ -584,4 +588,24 @@ input:-moz-placeholder { color:#9f9f9f; font-weight: 900; }
 
 .menu-mobile {
     display: none;
+}
+
+.btn-menu {
+    background-color: #fafafa;
+    display: none;
+}
+
+.btn-menu p{
+    margin: 0px;
+    text-align: center;
+}
+
+.gr-mobi-menu {
+    position:relative;
+    width:200px;
+    left:50%;
+    transform:translateX(-50%);
+    -ms-transform:translateX(-50%);
+    -moz-transform:translateX(-50%);
+    -webkit-transform:translateX(-50%);
 }

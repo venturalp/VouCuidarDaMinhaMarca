@@ -4,6 +4,14 @@
         <title>Vou cuidar da minha marca</title>
         <link rel="stylesheet" href="styles/style.css"/>
         <meta charset="utf-8">
+        <script src="scripts/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+               $("#toggleMenu").on("click", function(){
+                   $("#mobMenu").slideToggle(500);
+               });
+            });
+        </script>
     </head>
     <body>
         <header>
@@ -24,8 +32,11 @@
                 </aside>
             </section>
         </header>
-        <nav class="menu-mobile">
-            <div style="position:relative; left:50%;transform:translateX(-50%); width:170px;">
+        <section class="btn-menu">
+            <a href="#" id="toggleMenu"><p>MENU >></p></a>
+        </section>
+        <nav class="menu-mobile" id="mobMenu">
+            <div class="gr-mobi-menu">
                 <img src="images/bt_sobre_m.png"/>
                 <img src="images/bt_blog_m.png"/>
                 <img src="images/bt_registro_m.png"/>
