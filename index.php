@@ -1,56 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Vou cuidar da minha marca</title>
-        <link rel="stylesheet" href="styles/style.css"/>
-        <meta charset="utf-8">
-        <script src="scripts/jquery-1.11.3.min.js" type="text/javascript"></script>
-        <script type="text/javascript">
-            $(document).ready(function(){
-
-                $(window).resize(function(){
-                    if ($(window).width()>1024)
-                        $("#mobMenu").hide();
-                });
-
-               $("#toggleMenu").on("click", function(){
-                   $("#mobMenu").slideToggle(500);
-               });
-            });
-        </script>
-    </head>
-    <body>
-        <header>
-            <section class="logo"><img src="images/log_header.png"/></section>
-            <section class="container-menu">
-                <nav class="icons">
-                    <img src="images/bt_sobre.png"/>
-                    <img src="images/bt_blog.png"/>
-                    <img src="images/bt_registro.png"/>
-                    <img src="images/bt_logo.png"/>
-                    <img src="images/bt_social_media.png"/>
-                    <img src="images/bt_web.png"/>
-                </nav>
-                <aside class="small-icons">
-                    <img src="images/bt_face.png"/>
-                    <img src="images/bt_linkedin.png"/>
-                    <img src="images/bt_instagram.png"/>
-                </aside>
-            </section>
-        </header>
-        <section class="btn-menu">
-            <a href="#" id="toggleMenu"><img src="images/boton_menu.jpg"/></a>
-        </section>
-        <nav class="menu-mobile" id="mobMenu">
-            <div class="gr-mobi-menu">
-                <a href="http://sobre.com"><img src="images/bt_sobre_m.png"/></a>
-                <a href="http://blog_.com"><img src="images/bt_blog_m.png"/></a>
-                <a href="http://registro.com"><img src="images/bt_registro_m.png"/></a>
-                <a href="http://logo.com"><img src="images/bt_logo_m.png"/></a>
-                <a href="http://social_media.com"><img src="images/bt_social_media_m.png"/></a>
-                <a href="http://web.com"><img src="images/bt_web_m.png"/></a>
-            </div>
-        </nav>
+<?php include("header.html"); ?>
         <section>
             <img class="banner_home" src="images/banner1_home.jpg"/>
             <ul class="switch">
@@ -130,36 +78,4 @@
                 </div>
             </div>
         </section>
-
-        <footer>
-            <section class="newsletter">
-                <form>
-                    <p>COLOQUE SEU E-MAIL AQUI E RECEBA AS<br> ATUALIZAÇÕES DO NOSSO BLOG. É GRÁTIS</p>
-                    <input type="email" required ="email" size="30" placeholder="Coloque seu e-mail aqui"/>
-                    <input type="submit" value="QUERO RECEBER!"/>
-                </form>
-            </section>
-            <section class="foot-green">
-                <div class="foot-container">
-                    <nav>
-                        <ul>
-                            <li>SOBRE</li>
-                            <li>BLOG</li>
-                            <li>REGISTRO</li>
-                            <li>LOGO</li>
-                            <li>REDES SOCIAIS</li>
-                            <li>WEB</li>
-                        </ul>
-                    </nav>
-                    <aside>
-                        <p>Contato:<br>Vou cuidar da minha marca</p><br><br>
-                        Agência Betha Comunicação e Design<br>
-                        Rua: Ignácio Anselmo, 1167<br>
-                        Lençóis Paulista SP<br>
-                        contato@voucuidardaminhamarca.com.br
-                    </aside>
-                </div>
-            </section>
-        </footer>
-    </body>
-</html>
+<?php include("footer.html"); ?>
