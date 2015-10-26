@@ -652,3 +652,8 @@ footer {
 }
 
 html, body {height:100%;}
+
+.geral {
+    min-height:100%;
+	position:relative;
+}

@@ -77,5 +77,6 @@
                     <h1 class="subtituloH1 txtCenter"><span class="depH1">Samuel Pereira,</span> Empresa Tal</h1>
                 </div>
             </div>
+            <div class="clear"></div>
         </section>
 <?php include("footer.html"); ?>
