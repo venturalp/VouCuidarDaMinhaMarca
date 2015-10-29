@@ -240,6 +240,17 @@ input:-moz-placeholder { color:#9f9f9f; font-weight: 900; }
     text-align: center;
 }
 
+.a-empresa h1{
+    color: #9f9f9f;
+    font: 900 300% Helvetica;
+    margin-bottom: -12px;
+}
+
+.a-empresa p{
+    color:#000000;
+    font: 100 150% Helvetica;
+}
+
 .services-block p{
     font: 16px / 22px Helvetica;
     color: #a0a0a0;
@@ -274,6 +285,7 @@ input:-moz-placeholder { color:#9f9f9f; font-weight: 900; }
 
 .services {
     width: 100%;
+    padding-bottom: 30px;
 }
 
 .faixa-verde {
@@ -406,6 +418,32 @@ input:-moz-placeholder { color:#9f9f9f; font-weight: 900; }
     display: none;
     color: #ffffff;
     font: 400 20px / 16px Helvetica;
+}
+
+
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+html, body {height:100%;}
+
+.geral {
+    min-height:100%;
+	position:relative;
+    padding-bottom: 351px;
+}
+
+.a-empresa {
+    height: 190px;
+    background-color: #fafafa;
+    margin: 0 auto;
+}
+
+.a-empresa-container {
+    text-align: center;
 }
 
 
@@ -636,24 +674,8 @@ input:-moz-placeholder { color:#9f9f9f; font-weight: 900; }
         -moz-transform: translateY(-50%);
     }
 
-}
+    .geral{
+        padding-bottom: 0px !important;
+    }
 
-
-footer {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-}
-
-
-*{
-    padding: 0px;
-    margin: 0px;
-}
-
-html, body {height:100%;}
-
-.geral {
-    min-height:100%;
-	position:relative;
 }
