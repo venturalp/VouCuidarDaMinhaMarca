@@ -8,7 +8,7 @@
             </ul>
         </section>
         <section class="services">
-            <h2 class="subtituloH2 txtCenter">Conheça nossos serviços e faça a diferença.</h2>
+            <h1 class="txtCenter cinza">Conheça nossos serviços e faça a diferença.</h1>
             <div class="services-blocks">
                 <div class="services-block">
                     <img src="images/icon_registro_red.png"/>
@@ -37,7 +37,7 @@
         </section>
 
         <section class="trabalhos">
-            <h2 class="subtituloH2 txtCenter">Confira alguns dos trabalhos que já realizamos:</h2>
+            <h1 class="txtCenter cinza">Confira alguns dos trabalhos que já realizamos:</h1>
             <div class="imgs-trabalhos">
                 <img src="images/icon_cantinho.png"/>
                 <img src="images/icon_jornal.png"/>
@@ -52,29 +52,29 @@
         </section>
 
         <section class="clientes">
-            <h2 class="subtituloH2 txtCenter">Veja o que alguns de nossos clientes estão dizendo sobre o nosso trabalho:</h2>
+            <h1 class="txtCenter cinza">Veja o que alguns de nossos clientes estão dizendo sobre o nosso trabalho:</h1>
             <div class="cliente-block">
                 <img src="images/icon_cliente1.png"/>
                 <div class="depoimento">
-                    <img src="images/aspas_abre.png" class="abre-aspas"/><h1 class="subtituloH1 depH1 aspas">Se eu fosse você eu não perderia tempo para contratar.</h1><img src="images/aspas_fecha.png"  class="fecha-aspas"/>
+                    <h3 class="depH1 aspas">Se eu fosse você eu não perderia tempo para contratar.</h3>
                     <p>"Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor."</p>
-                    <h1 class="subtituloH1 txtCenter"><span class="depH1">Samuel Pereira,</span> Empresa Tal</h1>
+                    <h3 class="txtCenter"><span class="depH1">Samuel Pereira,</span> Empresa Tal</h3>
                 </div>
             </div>
             <div class="cliente-block">
                 <img src="images/icon_cliente1.png"/>
                 <div class="depoimento">
-                    <img src="images/aspas_abre.png" class="abre-aspas"/><h1 class="subtituloH1 depH1 aspas">Se eu fosse você eu não perderia tempo para contratar.</h1><img src="images/aspas_fecha.png"  class="fecha-aspas"/>
+                    <h3 class="depH1 aspas">Se eu fosse você eu não perderia tempo para contratar.</h3>
                     <p>"Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor."</p>
-                    <h1 class="subtituloH1 txtCenter"><span class="depH1">Samuel Pereira,</span> Empresa Tal</h1>
+                    <h3 class="txtCenter"><span class="depH1">Samuel Pereira,</span> Empresa Tal</h3>
                 </div>
             </div>
             <div class="cliente-block">
                 <img src="images/icon_cliente1.png"/>
                 <div class="depoimento">
-                    <img src="images/aspas_abre.png" class="abre-aspas"/><h1 class="subtituloH1 depH1 aspas">Se eu fosse você eu não perderia tempo para contratar.</h1><img src="images/aspas_fecha.png"  class="fecha-aspas"/>
+                    <h3 class="depH1 aspas">Se eu fosse você eu não perderia tempo para contratar.</h3>
                     <p>"Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor."</p>
-                    <h1 class="subtituloH1 txtCenter"><span class="depH1">Samuel Pereira,</span> Empresa Tal</h1>
+                    <h3 class="txtCenter"><span class="depH1">Samuel Pereira,</span> Empresa Tal</h3>
                 </div>
             </div>
             <div class="clear"></div>

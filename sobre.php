@@ -52,7 +52,7 @@ Sem cópias ou artes pré-existentes. Criamos seu logo, junto ao manual da sua m
         <div class="criacao-container diferencial-container">
             <h1>Nas redes sociais:</h1>
             <p>Nas redes sociais:
-ajudamos empresas a se tornarem conhecidas. Vender, informar, apresentar produtos e serviços através do Facebook e Instagram, todo isso monitorado e analisado estatisticamente.
+                ajudamos empresas a se tornarem conhecidas. Vender, informar, apresentar produtos e serviços através do <strong><i>Facebook</i></strong> e <strong><i>Instagram</i></strong>, todo isso monitorado e analisado estatisticamente.
             </p>
         </div>
         <div class="criacao-container diferencial-container">

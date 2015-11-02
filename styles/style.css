@@ -1,3 +1,25 @@
+h1{
+    font: 900 350% Helvetica;
+}
+
+.cinza {
+    color: #9f9f9f !important;
+}
+
+h2{
+    font: 900 175% Helvetica;
+}
+
+h3 {
+    font: 900 220% Helvetica;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: Helvetica;
+}
+
 header {
     width: 100%;
     background-color:#fafafa;
@@ -17,11 +39,6 @@ header {
     -ms-transform: translateY(-50%);
 }
 
-h2{
-    color: #9f9f9f;
-    font: 900 350% Helvetica;
-}
-
 .logo{
     margin-left: 10%;
 /*    margin-top: 5px;*/
@@ -29,11 +46,6 @@ h2{
     width: 15.6%;
     height: auto !important;
     float: left;
-}
-
-body {
-    padding: 0px;
-    margin: 0px;
 }
 
 .banner {
@@ -143,7 +155,6 @@ input:-moz-placeholder { color:#9f9f9f; font-weight: 900; }
 .foot-green nav ul li{
     display: inline;
     padding-right: 15px;
-    color: #ffffff;
     font: 700 16px / 24px Helvetica;
 }
 
@@ -260,7 +271,6 @@ input:-moz-placeholder { color:#9f9f9f; font-weight: 900; }
 
 .sec-sobre h1{
     color: #9f9f9f;
-    font: 900 350% Helvetica;
     margin-bottom: 0;
 }
 
@@ -284,14 +294,9 @@ input:-moz-placeholder { color:#9f9f9f; font-weight: 900; }
     text-align: right;
 }
 
-.services h2{
-    margin-bottom: 70px;
-    margin-top: 60px;
-}
-
-.subtituloH2 {
-    font: 900 28px / 26px Helvetica;
-    color: #9f9f9f;
+.services h1{
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .txtCenter{
@@ -308,37 +313,36 @@ input:-moz-placeholder { color:#9f9f9f; font-weight: 900; }
     -moz-transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     vertical-align: bottom;
+    padding-top: 30px;
 }
 
 .services {
     width: 100%;
     padding-bottom: 30px;
+    padding-top: 30px;
 }
 
 .faixa-verde {
-    height: 126px;
     background-color: #96c846;
+    padding: 30px 0 30px 0;
 }
 
 .faixa-verde p {
-    font: 900 30px / 30px Helvetica;
+    font: 900 220% Helvetica;
     color: #ffffff;
     text-align: center;
+    margin: 0;
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
 }
 
 .trabalhos {
     background-color: #e3e3e3;
     height: auto;
     min-height: 640px;
+    padding-top: 30px;
 }
 
-.trabalhos h2{
+.trabalhos h1{
     margin: 0px;
     padding-top: 30px;
 }
@@ -361,6 +365,7 @@ input:-moz-placeholder { color:#9f9f9f; font-weight: 900; }
     -moz-transform: translateX(-50%);
     height: auto;
     text-align: center;
+    padding-top: 20px;
 }
 
 .clear {
@@ -373,8 +378,10 @@ input:-moz-placeholder { color:#9f9f9f; font-weight: 900; }
     width: 100%;
 }
 
-.clientes h2{
+.clientes h1{
     margin-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .cliente-block img{
@@ -404,10 +411,6 @@ input:-moz-placeholder { color:#9f9f9f; font-weight: 900; }
     -ms-transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
-}
-
-.subtituloH1 {
-    font: 900 18px / 16.8px Helvetica;
 }
 
 .depoimento {
@@ -441,10 +444,7 @@ input:-moz-placeholder { color:#9f9f9f; font-weight: 900; }
 }
 
 .foot-cont-mobile {
-    text-align: center;
     display: none;
-    color: #ffffff;
-    font: 400 20px / 16px Helvetica;
 }
 
 
@@ -535,8 +535,25 @@ html, body {height:100%;}
 
 .sobre-end-container h2 {
     margin: 0px;
-    font: 900 175% Helvetica;
 }
+
+.aspas:before{
+    content: url("../images/aspas_abre.png");
+}
+
+.aspas:after{
+    content: url("../images/aspas_fecha.png");
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover{
+    color: #64964b ;
+}
+
 
 
 @media screen and (max-width: 1024px){
@@ -629,7 +646,7 @@ html, body {height:100%;}
     }
 
     .foot-green {
-        height: 60px !important;
+        height: 100px !important;
         position: relative;
     }
 
@@ -665,21 +682,8 @@ html, body {height:100%;}
         font: 900 70px / 70px Helvetica!important;
     }
 
-    .subtituloH2 {
-        font: 900 48px / 46px Helvetica !important;
-        color: #9f9f9f;
-    }
-
-.services h2{
-   padding: 0 10% 0 10% !important;
-}
-
-    .aspas:before{
-        content: url("../images/aspas_abre.png");
-    }
-
-    .aspas:after{
-        content: url("../images/aspas_fecha.png");
+    .services h1{
+       padding: 0 10% 0 10% !important;
     }
 
     .depH1{
@@ -701,10 +705,6 @@ html, body {height:100%;}
         vertical-align: middle;
         display: block;
         width: 100%;
-    }
-
-    .subtituloH1 {
-        font: 900 28px / 26.8px Helvetica !important;
     }
 
     .depoimento {
@@ -754,6 +754,9 @@ html, body {height:100%;}
     }
 
     .foot-cont-mobile {
+        text-align: center;
+        color: #ffffff;
+        font: 400 220% Helvetica;
         display: inline-block;
         width: 100%;
         float: left;
