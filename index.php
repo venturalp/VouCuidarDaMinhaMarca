@@ -1,6 +1,6 @@
 <?php include("header.html"); ?>
         <section>
-            <img class="banner_home" src="images/banner1_home.jpg"/>
+            <img class="banner" src="images/banner1_home.jpg"/>
             <ul class="switch">
                 <li class="sw-icon sw-selected"></li>
                 <li class="sw-icon"></li>
