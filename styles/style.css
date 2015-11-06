@@ -554,7 +554,16 @@ footer a:hover{
     color: #64964b ;
 }
 
+@media screen and (max-width: 1600px){
 
+    .reg-block:last-child  {
+        margin-right: 15% !important;
+    }
+
+    .reg-block:first-child  {
+        margin-left: 15% !important;
+    }
+}
 
 @media screen and (max-width: 1024px){
     .container-menu{
@@ -775,4 +784,202 @@ footer a:hover{
     .agencia-container p{
         text-align: center !important;
     }
+
+    .registro2 p{
+        width: 60% !important;
+    }
+
+    .registro1 p{
+        font: 700 168% Helvetica !important;
+        width: 98% !important;
+    }
+
+    .registro4{
+        padding: 15px 5% 15px 5% !important;
+    }
+
+
+    .reg-block:last-child  {
+        margin-right: 10% !important;
+    }
+
+    .reg-block:first-child  {
+        margin-left: 10% !important;
+    }
+
+    .reg5-row{
+        display: block !important;
+    }
+
+    .reg6-container {
+        width: 80% !important;
+    }
+}
+
+.registro1 {
+    background-color: #fafafa;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    padding: 25px 0 60px 0;
+}
+
+.registro1 p{
+    font: 700 175% Helvetica;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.registro2 p{
+    font: 700 168% Helvetica;
+    margin: 0 auto;
+    text-align: left;
+    color: white;
+    width: 72%;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 5%;
+}
+
+.registro-alerta:after{
+    content: url(../images/icon_alerta.png);
+}
+
+.registro2 {
+    background-color: #363435;
+    position: relative;
+    min-height: 150px;
+}
+
+.registro-alerta {
+    margin-left: 10%;
+    z-index: 999;
+    position: absolute;
+    top: -24%;
+
+}
+
+.registro3 {
+    background-color: #fafafa;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.registro3 p{
+    color: #999999;
+    font: 700 196% Helvetica;
+    text-align: center;
+}
+
+.registro4{
+    color: #ffffff;
+    background-color: #96c846;
+    padding: 30px 15% 30px 15%;
+    text-align: center;
+}
+
+.registro4 h2{
+    margin:0;
+}
+
+.registro4 p{
+    font: 100 120% Helvetica;
+}
+
+.reg-block {
+    max-width: 348px;
+    text-align: center;
+    display: inline-block !important;
+    vertical-align: top;
+    position: inherit;
+}
+
+.reg-block p{
+    font: 100 145% Helvetica;
+}
+
+.reg-block div{
+    height: 200px;
+}
+
+.reg-block:first-child  {
+    margin-left: 20%;
+}
+
+.reg-block:last-child  {
+    float: right;
+    margin-right: 20%;
+}
+
+.reg5-row {
+    display: block;
+}
+
+.reg5-row:first-child {
+    margin-bottom: 40px;
+}
+
+.registro5 {
+    padding: 30px 0 30px 0;
+}
+.form-registro label{
+    font-weight: 900;
+}
+
+.form-registro input, .form-registro label{
+    display: block;
+    width: 100%;
+}
+
+.reg6-container h2{
+    text-align: center;
+}
+
+
+.reg6-container input[type="button"]{
+    background-color: #595959;
+    border: 1px solid #595959;
+    color: white;
+    font: 900 100% Helvetica;
+    padding: 5px 30px 5px 30px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+
+.reg6-container {
+    width: 40%;
+    color: #9f9f9f;
+    margin: 0 auto;
+}
+
+.registro6 {
+    padding: 30px 0 30px 0;
+    display: inline-block;
+    width: 100%;
+}
+
+.form-registro input{
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+.form-registro input{
+    border-left-style: none;
+    border-top-style: none;
+    border-right-color: #9f9f9f;
+    border-bottom-color: #9f9f9f;
+    background-color: #eeeeee;
+    padding: 5px 2px 5px 2px;
+    color: #9f9f9f;
+    font: 100 120% Helvetica;
 }
