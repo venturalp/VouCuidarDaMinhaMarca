@@ -1,5 +1,5 @@
 <?php include("header.html") ?>
-<img class="banner" src="images/banner_registro.png"/>
+<img class="banner" src="images/banner_registro.jpg"/>
 <article class="registro1">
     <p class="cinza">A marca é a cara da empresa. É dela que o seu consumidor vai lembrar quando quiser o seu produto. Mas, e se existirem duas marcas parecidas ou até mesmo iguais? É prejuízo na certa! Seu consumidor pode se confundir e comprar na outra. E pior que isso, dar preferência para ela! Definitivamente, você não quer isso, né?!</p>
 </article>

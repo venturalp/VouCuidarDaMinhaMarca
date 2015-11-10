@@ -1,5 +1,9 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
 h1{
-    font: 900 350% Helvetica;
+    font: 900 350% 'Open Sans', sans-serif;
 }
 
 .cinza {
@@ -7,17 +11,17 @@ h1{
 }
 
 h2{
-    font: 900 175% Helvetica;
+    font: 900 175% 'Open Sans', sans-serif;
 }
 
 h3 {
-    font: 900 220% Helvetica;
+    font: 900 220% 'Open Sans', sans-serif;
 }
 
 body {
     padding: 0px;
     margin: 0px;
-    font-family: Helvetica;
+    font-family: 'Open Sans', sans-serif;
 }
 
 header {
@@ -155,7 +159,7 @@ input:-moz-placeholder { color:#9f9f9f; font-weight: 900; }
 .foot-green nav ul li{
     display: inline;
     padding-right: 15px;
-    font: 700 16px / 24px Helvetica;
+    font: 700 16px / 24px 'Open Sans', sans-serif;
 }
 
 .foot-green nav {
@@ -193,12 +197,12 @@ input:-moz-placeholder { color:#9f9f9f; font-weight: 900; }
     -webkit-transform: translateY(-50%);
 
     color: #edebf0;
-    font: 600 12px / 16.8px Helvetica;
+    font: 600 12px / 16.8px 'Open Sans', sans-serif;
 }
 
 .foot-container aside p{
     margin: 0px;
-    font: 600 16px / 20px Helvetica;
+    font: 600 16px / 20px 'Open Sans', sans-serif;
     color: #edebf0;
 }
 
@@ -255,7 +259,7 @@ input:-moz-placeholder { color:#9f9f9f; font-weight: 900; }
 
 .services-block h1{
     color: #000000;
-    font: 900 30px / 32px Helvetica;
+    font: 900 30px / 32px 'Open Sans', sans-serif;
     text-align: center;
 }
 
@@ -281,11 +285,11 @@ input:-moz-placeholder { color:#9f9f9f; font-weight: 900; }
 
 .sec-sobre p{
     color:#000000;
-    font: 100 204% Helvetica;
+    font: 100 204% 'Open Sans', sans-serif;
 }
 
 .services-block p{
-    font: 16px / 22px Helvetica;
+    font: 16px / 22px 'Open Sans', sans-serif;
     color: #a0a0a0;
     text-align: center;
 }
@@ -328,7 +332,7 @@ input:-moz-placeholder { color:#9f9f9f; font-weight: 900; }
 }
 
 .faixa-verde p {
-    font: 900 220% Helvetica;
+    font: 900 220% 'Open Sans', sans-serif;
     color: #ffffff;
     text-align: center;
     margin: 0;
@@ -395,7 +399,7 @@ input:-moz-placeholder { color:#9f9f9f; font-weight: 900; }
 }
 
 .cliente-block p{
-    font: 16px / 21.2px Helvetica;
+    font: 16px / 21.2px 'Open Sans', sans-serif;
     color: #868686;
     display: block;
     vertical-align: middle;
@@ -454,7 +458,7 @@ footer {
     width: 100%;
 }
 
-html, body {height:100%;}
+html, body {height:100%; overflow-x: hidden;}
 
 .geral {
     min-height:100%;
@@ -554,268 +558,6 @@ footer a:hover{
     color: #64964b ;
 }
 
-@media screen and (max-width: 1600px){
-
-    .reg-block:last-child  {
-        margin-right: 15% !important;
-    }
-
-    .reg-block:first-child  {
-        margin-left: 15% !important;
-    }
-}
-
-@media screen and (max-width: 1024px){
-    .container-menu{
-        margin: auto !important;
-        float: none !important;
-        top: 0 !important;
-        width: 100% !important;
-        display: none !important;
-    }
-
-    .logo{
-        float: none !important;
-        position: relative !important;
-        display: block;
-/*        display: none;*/
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        margin-bottom: 20px;
-        width: auto !important;
-        height: auto !important;
-    }
-
-    .logo img{
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%) scale(1.8);
-        -moz-transform: translateX(-50%) scale(1.8);
-        -ms-transform: translateX(-50%) scale(1.8);
-        -webkit-transform: translateX(-50%) scale(1.8);
-        padding-top: 30px;
-        margin-bottom: 80px;
-    }
-
-    .icons{
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 20px;
-        display: block !important;
-/*        display: none;*/
-        float: left;
-        position: relative;
-        width: auto;
-        left: 50%;
-        transform: translateX(-50%);
-        -moz-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        -webkit-transform: translateX(-50%);
-    }
-
-    .icons img{
-        transform: scale(1.5);
-        margin-right: 100px !important;
-    }
-
-    .icons img:last-child{
-        margin-right: 0px !important;
-    }
-    .small-icons{
-        display: none !important;
-        width: auto;
-        float: left;
-        left:0;
-        position: absolute;
-        margin-top: 60px;
-/*        position: relative !important;*/
-        left: 50%;
-        transform: translateX(-50%);
-        -moz-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        -webkit-transform: translateX(-50%);
-    }
-
-    .small-icons img{
-        display: inline-block !important;
-/*        display: none;*/
-        margin-top: 0 !important;
-        margin-bottom: 0 !important;
-    }
-
-    header{
-        height: 140px !important;
-        margin: 0 auto;
-        left: 50%;
-/*        display: none;*/
-    }
-
-    .newsletter{
-        display: none !important;
-    }
-
-    .foot-green {
-        height: 100px !important;
-        position: relative;
-    }
-
-    .foot-green aside{
-        display: none !important;
-    }
-
-    .foot-green nav{
-        display: none !important;
-    }
-
-    .services-block {
-        width: 100% !important;
-        text-align: center;
-        margin-right: 0px !important;
-        display: block !important;
-        vertical-align: top;
-        margin-top: 140px !important;
-        left: 0 !important;
-    }
-
-    .services-block:first-child {
-	   margin-top: 0px !important;
-    }
-
-    .services-block p{
-        font: 900 50px / 50px Helvetica!important;
-        padding-left: 10%;
-        padding-right: 10%;
-    }
-
-    .services-block h1{
-        font: 900 70px / 70px Helvetica!important;
-    }
-
-    .services h1{
-       padding: 0 10% 0 10% !important;
-    }
-
-    .depH1{
-        display: block !important;
-        color: #64964b;
-        text-align: center;
-    }
-
-    .cliente-block p{
-        font: 36px / 41.2px Helvetica !important;
-        color: #868686;
-        display: block;
-        vertical-align: middle;
-        padding: 0 12% 0 12%;
-        text-align: center;
-    }
-    .cliente-block {
-        margin: 100px 0 100px 0;
-        vertical-align: middle;
-        display: block;
-        width: 100%;
-    }
-
-    .depoimento {
-        width: 100% !important;
-        max-width: 100% !important;
-        display: inline-block;
-        margin-left: 0px !important;
-    }
-
-    .abre-aspas {
-        display: none !important;
-    }
-
-    .fecha-aspas {
-        display: none !important;
-    }
-
-    .cliente-block img{
-        left: 50%;
-        position: relative;
-        transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        -moz-transform: translateX(-50%);
-        -webkit-transform: translateX(-50%);
-
-    }
-
-    .menu-mobile {
-        height: auto;
-    }
-
-    .menu-mobile img{
-        display: block !important;
-        position: relative;
-        margin: 60px 0 60px 0;
-    }
-
-    .btn-menu{
-        display: block !important;
-    }
-
-    .btn-menu img{
-        vertical-align: bottom;
-        display: inline-block;
-        z-index: 1000;
-        position: relative;
-    }
-
-    .foot-cont-mobile {
-        text-align: center;
-        color: #ffffff;
-        font: 400 220% Helvetica;
-        display: inline-block;
-        width: 100%;
-        float: left;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-    }
-
-    .geral{
-        padding-bottom: 0px !important;
-    }
-
-    .agencia-container p{
-        text-align: center !important;
-    }
-
-    .registro2 p{
-        width: 60% !important;
-    }
-
-    .registro1 p{
-        font: 700 168% Helvetica !important;
-        width: 98% !important;
-    }
-
-    .registro4{
-        padding: 15px 5% 15px 5% !important;
-    }
-
-
-    .reg-block:last-child  {
-        margin-right: 10% !important;
-    }
-
-    .reg-block:first-child  {
-        margin-left: 10% !important;
-    }
-
-    .reg5-row{
-        display: block !important;
-    }
-
-    .reg6-container {
-        width: 80% !important;
-    }
-}
-
 .registro1 {
     background-color: #fafafa;
     position: relative;
@@ -825,14 +567,14 @@ footer a:hover{
 }
 
 .registro1 p{
-    font: 700 175% Helvetica;
+    font: 700 175% 'Open Sans', sans-serif;
     width: 70%;
     margin: 0 auto;
     text-align: center;
 }
 
 .registro2 p{
-    font: 700 168% Helvetica;
+    font: 700 168% 'Open Sans', sans-serif;
     margin: 0 auto;
     text-align: left;
     color: white;
@@ -868,7 +610,7 @@ footer a:hover{
 
 .registro3 p{
     color: #999999;
-    font: 700 196% Helvetica;
+    font: 700 196% 'Open Sans', sans-serif;
     text-align: center;
 }
 
@@ -884,7 +626,7 @@ footer a:hover{
 }
 
 .registro4 p{
-    font: 100 120% Helvetica;
+    font: 100 120% 'Open Sans', sans-serif;
 }
 
 .reg-block {
@@ -896,7 +638,7 @@ footer a:hover{
 }
 
 .reg-block p{
-    font: 100 145% Helvetica;
+    font: 100 145% 'Open Sans', sans-serif;
 }
 
 .reg-block div{
@@ -941,7 +683,7 @@ footer a:hover{
     background-color: #595959;
     border: 1px solid #595959;
     color: white;
-    font: 900 100% Helvetica;
+    font: 900 100% 'Open Sans', sans-serif;
     padding: 5px 30px 5px 30px;
     position: relative;
     left: 50%;
@@ -967,12 +709,6 @@ footer a:hover{
     margin-bottom: 15px;
 }
 
-
-
-
-
-
-
 .form-registro input{
     border-left-style: none;
     border-top-style: none;
@@ -981,5 +717,63 @@ footer a:hover{
     background-color: #eeeeee;
     padding: 5px 2px 5px 2px;
     color: #9f9f9f;
-    font: 100 120% Helvetica;
+    font: 100 120% 'Open Sans', sans-serif;
+}
+
+.logo1 h2{
+    padding: 0px 150px 0px 150px;
+}
+
+.logo1 img{
+    position: absolute;
+    bottom: 0px;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    max-width: 100%;
+}
+
+.logo1 p{
+    margin: 0;
+    padding: 0;
+    width: 220px;
+    position: absolute;
+    bottom: 3%;
+    left: 48%;
+    font-size: 175%;
+    color: white;
+}
+
+.logo1 {
+    padding: 30px 0px 0px 0px;
+    background-color: #f5f0ec;
+    text-align: center;
+}
+
+.logo-verde1 {
+    background-color: #79c268;
+    height: 20px;
+    position: relative;
+    margin-top: 920px;
+}
+
+.logo-verde2 {
+    background-color: #c5d747;
+    min-height: 550px;
+    position: relative;
+}
+
+.faixa-verde-logo h2{
+    margin: 0;
+    padding: 0;
+    font-size: 270%;
+    font-weight: 900;
+}
+.faixa-verde-logo {
+    background-color: #79c268;
+    color: white;
+    text-align: center;
+    margin: 0px;
+    padding: 15px 0 10px 0;
 }

@@ -1,0 +1,10 @@
+@media screen and (max-width: 1600px){
+
+    .reg-block:last-child  {
+        margin-right: 15% !important;
+    }
+
+    .reg-block:first-child  {
+        margin-left: 15% !important;
+    }
+}
