@@ -1,23 +1,23 @@
 <?php include("header.html") ?>
 <img class="banner" src="images/banner_registro.jpg"/>
-<article class="registro1">
+<section class="registro1">
     <p class="cinza">A marca é a cara da empresa. É dela que o seu consumidor vai lembrar quando quiser o seu produto. Mas, e se existirem duas marcas parecidas ou até mesmo iguais? É prejuízo na certa! Seu consumidor pode se confundir e comprar na outra. E pior que isso, dar preferência para ela! Definitivamente, você não quer isso, né?!</p>
-</article>
-<article class="registro2">
+</section>
+<section class="registro2">
     <div class="registro-alerta">
         <p>SEM PROTEÇÃO, SUA MARCA FICA VULNERÁVEL E PODE CONFUNDIR SEU CONSUMIDOR. ISSO NÃO É NADA BOM PARA O SEU NEGÓCIO. </p>
     </div>
-</article>
-<article class="registro3">
+</section>
+<section class="registro3">
     <p>E QUANDO ISSO ACONTECE, O QUE DEVO FAZER?</p>
-</article>
-<article class="registro4">
+</section>
+<section class="registro4">
     <h2>1º SE PREVENIR</h2>
     <p>A sua marca deve ser protegida com o registro no INPI (Instituto Nacional de Propriedade Industrial). Mas não adianta só depositar sua marca lá para ver o que acontece. Ela só estará registrada após um longo processo de registro, que tem que ser acompanhado por mais ou menos 24 meses para garantir que sua marca conseguirá concluir todas as etapas com sucesso.</p><br><br>
     <h2>2º CONTRATAR UMA EMPRESA ESPECIALIZADA.</h2>
     <p>A sua marca deve ser protegida com o registro no INPI (Instituto Nacional de Propriedade Industrial). Mas não adianta só depositar sua marca lá para ver o que acontece. Ela só estará registrada após um longo processo de registro, que tem que ser acompanhado por mais ou menos 24 meses para garantir que sua marca conseguirá concluir todas as etapas com sucesso.</p>
-</article>
-<article class="registro5">
+</section>
+<section class="registro5">
     <div class="reg5-row">
         <div class="reg-block">
             <div><img src="images/icon_lupa.png"/></div>
@@ -42,8 +42,8 @@
             <p>Isso mesmo! Você terá acesso ILIMITADO ao seu processo de registro.</p>
         </div>
     </div>
-</article>
-<article class="registro6">
+</section>
+<section class="registro6">
     <div class="reg6-container">
         <h2>PESQUISE AGORA SUA MARCA!</h2>
         <form class="form-registro">
@@ -58,5 +58,5 @@
         </form>
         <input type="button" id="enviar" value="ENVIAR"/>
     </div>
-</article>
+</section>
 <?php include("footer.html") ?>
