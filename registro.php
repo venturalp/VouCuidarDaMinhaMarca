@@ -33,13 +33,13 @@
         <div class="reg5-row">
         <div class="reg-block">
             <div><img src="images/icon_r.png"/></div>
-            <h2>1º PESQUISE SUA MARCA CONOSCO</h2>
-            <p>Em 24 horas você receberá um e-mail com seu login e senha, para poder ver o resultado de disponibilidade de registro da sua marca, que será analisado e esclarecido por um de nossos consultores.</p>
+            <h2>3º RECEBA SEU COMPROVANTE</h2>
+            <p>Iniciado seu processo de registro, entregamos seu protocolo de marca em no máximo 48 horas após a confirmação do pagamento.</p>
         </div>
         <div class="reg-block">
             <div><img src="images/icon_joia.png"/></div>
-            <h2>2º TENHA LIVRE ACESSO A ÁREA DO CLIENTE</h2>
-            <p>Com login e senha você poderá facilmente escolher qual dos nossos planos melhor se encaixa em suas necessidades e seus interesses.</p>
+            <h2>4º ACESSE SEU PROTOCOLO DE REGISTRO</h2>
+            <p>Isso mesmo! Você terá acesso ILIMITADO ao seu processo de registro.</p>
         </div>
     </div>
 </article>
