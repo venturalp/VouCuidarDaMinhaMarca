@@ -1,25 +1,23 @@
-@media screen and (max-width: 1024px){
-    .container-menu{
+@media screen and (max-width: 1024px) {
+    .container-menu {
         margin: auto !important;
         float: none !important;
         top: 0 !important;
         width: 100% !important;
         display: none !important;
     }
-
-    .logo{
+    .logo {
         float: none !important;
         position: relative !important;
         display: block;
-/*        display: none;*/
+        /*        display: none;*/
         margin-left: 0 !important;
         margin-right: 0 !important;
         margin-bottom: 20px;
         width: auto !important;
         height: auto !important;
     }
-
-    .logo img{
+    .logo img {
         position: relative;
         left: 50%;
         transform: translateX(-50%) scale(1.8);
@@ -29,13 +27,12 @@
         padding-top: 30px;
         margin-bottom: 80px;
     }
-
-    .icons{
+    .icons {
         margin-left: 0;
         margin-right: 0;
         margin-bottom: 20px;
         display: block !important;
-/*        display: none;*/
+        /*        display: none;*/
         float: left;
         position: relative;
         width: auto;
@@ -45,61 +42,52 @@
         -ms-transform: translateX(-50%);
         -webkit-transform: translateX(-50%);
     }
-
-    .icons img{
+    .icons img {
         transform: scale(1.5);
         margin-right: 100px !important;
     }
-
-    .icons img:last-child{
+    .icons img:last-child {
         margin-right: 0px !important;
     }
-    .small-icons{
+    .small-icons {
         display: none !important;
         width: auto;
         float: left;
-        left:0;
+        left: 0;
         position: absolute;
         margin-top: 60px;
-/*        position: relative !important;*/
+        /*        position: relative !important;*/
         left: 50%;
         transform: translateX(-50%);
         -moz-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
         -webkit-transform: translateX(-50%);
     }
-
-    .small-icons img{
+    .small-icons img {
         display: inline-block !important;
-/*        display: none;*/
+        /*        display: none;*/
         margin-top: 0 !important;
         margin-bottom: 0 !important;
     }
-
-    header{
+    header {
         height: 140px !important;
         margin: 0 auto;
         left: 50%;
-/*        display: none;*/
+        /*        display: none;*/
     }
-
-    .newsletter{
+    .newsletter {
         display: none !important;
     }
-
     .foot-green {
         height: 100px !important;
         position: relative;
     }
-
-    .foot-green aside{
+    .foot-green aside {
         display: none !important;
     }
-
-    .foot-green nav{
+    .foot-green nav {
         display: none !important;
     }
-
     .services-block {
         width: 100% !important;
         text-align: center;
@@ -109,32 +97,26 @@
         margin-top: 140px !important;
         left: 0 !important;
     }
-
     .services-block:first-child {
-	   margin-top: 0px !important;
+        margin-top: 0px !important;
     }
-
-    .services-block p{
+    .services-block p {
         font: 900 50px / 50px 'Open Sans', sans-serif!important;
         padding-left: 10%;
         padding-right: 10%;
     }
-
-    .services-block h1{
+    .services-block h1 {
         font: 900 70px / 70px 'Open Sans', sans-serif!important;
     }
-
-    .services h1{
-       padding: 0 10% 0 10% !important;
+    .services h1 {
+        padding: 0 10% 0 10% !important;
     }
-
-    .depH1{
+    .depH1 {
         display: block !important;
         color: #64964b;
         text-align: center;
     }
-
-    .cliente-block p{
+    .cliente-block p {
         font: 36px / 41.2px 'Open Sans', sans-serif !important;
         color: #868686;
         display: block;
@@ -148,58 +130,48 @@
         display: block;
         width: 100%;
     }
-
     .depoimento {
         width: 100% !important;
         max-width: 100% !important;
         display: inline-block;
         margin-left: 0px !important;
     }
-
     .abre-aspas {
         display: none !important;
     }
-
     .fecha-aspas {
         display: none !important;
     }
-
-    .cliente-block img{
+    .cliente-block img {
         left: 50%;
         position: relative;
         transform: translateX(-50%);
         -ms-transform: translateX(-50%);
         -moz-transform: translateX(-50%);
         -webkit-transform: translateX(-50%);
-
     }
-
     .menu-mobile {
         height: auto;
     }
-
-    .menu-mobile img{
+    .menu-mobile img {
         display: block !important;
         position: relative;
         margin: 60px 0 60px 0;
     }
-
-    .btn-menu{
+    .btn-menu {
         display: block !important;
     }
-
-    .btn-menu img{
+    .btn-menu img {
         vertical-align: bottom;
         display: inline-block;
         z-index: 1000;
         position: relative;
     }
-
     .foot-cont-mobile {
         text-align: center;
         color: #ffffff;
         font: 400 220% 'Open Sans', sans-serif;
-        display: inline-block;
+        display: inline-block !important;
         width: 100%;
         float: left;
         position: relative;
@@ -209,50 +181,64 @@
         -webkit-transform: translateY(-50%);
         -moz-transform: translateY(-50%);
     }
-
-    .geral{
+    .geral {
         padding-bottom: 0px !important;
     }
-
-    .agencia-container p{
+    .agencia-container p {
         text-align: center !important;
     }
-
-    .registro2 p{
+    .registro2 p {
         width: 60% !important;
     }
-
-    .registro1 p{
+    .registro1 p {
         font: 700 168% 'Open Sans', sans-serif !important;
         width: 98% !important;
     }
-
-    .registro4{
+    .registro4 {
         padding: 15px 5% 15px 5% !important;
     }
-
-
-    .reg-block:last-child  {
+    .reg-block:last-child {
         margin-right: 10% !important;
     }
-
-    .reg-block:first-child  {
+    .reg-block:first-child {
         margin-left: 10% !important;
     }
-
-    .reg5-row{
+    .reg5-row {
         display: block !important;
     }
-
     .reg6-container {
         width: 80% !important;
     }
-
-    .faixa-verde-logo h2{
-    margin: 0;
-    padding: 0;
-    font-size: 200%;
-    font-weight: 900;
-}
-
+    .faixa-verde-logo h2 {
+        margin: 0;
+        padding: 0;
+        font-size: 200%;
+        font-weight: 900;
+    }
+    .blocos-logo {
+        width: 94% !important;
+    }
+    .blocos-logo div {
+        width: 48% !important;
+    }
+    .logo2 h2 {
+        padding: 0px 4% 0px 4% !important;
+    }
+    .logo3 {
+        padding: 30px 2% 30px 2% !important;
+    }
+    .logo4 h2 {
+        padding: 20px 4% 20px 4% !important;
+    }
+    .breafing form {
+        width: 96% !important;
+    }
+    .breafing {
+        display: none;
+    }
+    .redes-agencia-p {
+        margin-right: 0% !important;
+        width: 68% !important;
+        font: 900 244% 'Open Sans', sans-serif !important;
+    }
 }

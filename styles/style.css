@@ -616,7 +616,7 @@ footer a:hover {
     margin-left: 10%;
     z-index: 999;
     position: absolute;
-    top: -24%;
+    top: -28%;
 }
 
 .registro3 {
@@ -954,4 +954,139 @@ textarea{
 
 .breafing {
     margin-bottom: 30px;
+}
+
+.rede-posicionar p{
+    text-align: right;
+    font: 900 120% 'Open Sans', sans-serif;
+    color: #365c94;
+    width: 70%;
+    left: 100%;
+    transform: translateX(-120%);
+    position: relative;
+}
+
+.rede-posicionar img:first-child{
+    margin-top: -60px;
+    width: 24%;
+    height: auto;
+}
+
+.rede-quero-posicionar{
+    width: 65%;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.rede-posicionar {
+    padding: 10px 12% 50px 12%;
+    border-bottom: 8px solid #365c94;
+    border-top: 8px solid #365c94;
+    background-color: #dae5e8;
+    padding-bottom: 60px;
+}
+
+
+
+.redes-h2 {
+    text-align: center;
+    padding: 20px 8% 20px 8%;
+}
+
+.redes-agencia img:first-child{
+    margin-top: -6%;
+    width: 32%;
+    height: auto;
+}
+
+.redes-agencia {
+    padding: 10px 12% 50px 12%;
+}
+
+.redes-agencia-p {
+    display: inline-block;
+    vertical-align: top;
+    font: 900 380% 'Open Sans', sans-serif;
+    text-align: right;
+    margin-top: 1%;
+    margin-right: 8%;
+    float: right;
+    width: 60%;
+}
+
+
+
+.redes-bloco-text{
+    color: white;
+    font-style: italic;
+    font: 100 125% 'Open Sans', sans-serif;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: 0;
+}
+
+.redes-bloco{
+    width: 32.5%;
+    margin-right: 0.1%;
+    min-height: 250px;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+
+.redes-bloco:last-child{
+    margin-right: 0px;
+}
+
+.redes-blocos {
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.bloco-marrom {
+    background-color: #713b19;
+}
+
+.bloco-vermelho-claro {
+    background-color: #da3b1b;
+}
+
+.bloco-laranja-claro {
+    background-color: #e4902d;
+}
+
+.redes-circulo p{
+    position: relative;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    font: 900 200% "Open Sans", sans-serif;
+}
+
+.redes-circulo {
+    background-color: white;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.redes-titulo-bloco {
+    color: white;
+    display: inline-block;
+    font: 900 250% 'Open Sans', sans-serif;
+    margin: 0px;
+    transform: translateY(-25%);
+    -ms-transform: translateY(-25%);
+    -o-transform: translateY(-25%);
+    -webkit-transform: translateY(-25%);
+}
+
+.redes-header-bloco {
+    padding: 20px 20px 0 20px;
 }
