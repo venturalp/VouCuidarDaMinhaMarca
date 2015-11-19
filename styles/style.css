@@ -1018,8 +1018,7 @@ textarea{
 
 .redes-bloco-text{
     color: white;
-    font-style: italic;
-    font: 100 125% 'Open Sans', sans-serif;
+    font: 400 italic 125% 'Open Sans', sans-serif;
     padding-left: 5%;
     padding-right: 5%;
     margin: 0;
