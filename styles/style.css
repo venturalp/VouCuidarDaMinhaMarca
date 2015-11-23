@@ -1025,23 +1025,25 @@ textarea{
 }
 
 .redes-bloco{
-    width: 32.5%;
-    margin-right: 0.1%;
+    width: 33%;
+    display: table-cell;
     min-height: 250px;
-    display: inline-block;
     vertical-align: top;
     margin-bottom: 20px;
     padding-bottom: 15px;
+    border-right: 8px solid white;
 }
 
 .redes-bloco:last-child{
     margin-right: 0px;
+    border: 0px;
 }
 
 .redes-blocos {
     width: 75%;
     margin: 0 auto;
     margin-bottom: 20px;
+    display: table;
 }
 
 .bloco-marrom {
