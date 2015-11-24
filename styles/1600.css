@@ -1,17 +1,39 @@
 @media screen and (min-width: 1025px) and (max-width: 1600px){
-
-    .reg-block:last-child  {
+    .reg-block:last-child {
         margin-right: 15% !important;
     }
-
-    .reg-block:first-child  {
+    .reg-block:first-child {
         margin-left: 15% !important;
     }
-
     .blocos-logo {
         width: 84% !important;
     }
     .blocos-logo div {
         width: 25% !important;
+    }
+    .redes-blocos {
+        width: 95% !important;
+    }
+
+    .redes-titulo-bloco {
+        font: 900 180% 'Open Sans', sans-serif !important;
+        transform: translateY(-50%) !important;
+        -ms-transform: translateY(-50%)!important;
+        -o-transform: translateY(-50%)!important;
+        -webkit-transform: translateY(-50%) !important;
+    }
+    .redes-circulo p {
+        transform: translateY(-45%) !important;
+        -ms-transform: translateY(-45%) !important;
+        -o-transform: translateY(-45%) !important;
+        -webkit-transform: translateY(-45%) !important;
+        font: 900 200% "Open Sans", sans-serif !important;
+    }
+
+    .redes-agencia-p {
+        font: 900 280% 'Open Sans', sans-serif !important;
+        margin-top: 2% !important;
+        margin-right: -8% !important;
+        width: 75% !important;
     }
 }

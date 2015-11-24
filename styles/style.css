@@ -1040,10 +1040,11 @@ textarea{
 }
 
 .redes-blocos {
-    width: 75%;
+    width: 80%;
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     display: table;
+    min-height: 350px;
 }
 
 .bloco-marrom {
@@ -1090,4 +1091,36 @@ textarea{
 
 .redes-header-bloco {
     padding: 20px 20px 0 20px;
+}
+
+.redes-oque {
+    display: block;
+    text-align: center
+}
+
+.frases-bloco:nth-child(1), .frases-bloco:nth-child(4), .frases-bloco:nth-child(7) {
+    background-color: #96c846;
+}
+
+
+.frases-bloco:nth-child(2), .frases-bloco:nth-child(5), .frases-bloco:nth-child(8) {
+    background-color: #00a274;
+}
+
+.frases-bloco:nth-child(3), .frases-bloco:nth-child(6), .frases-bloco:nth-child(9) {
+    background-color: #009ab7;
+}
+
+
+.frases-bloco {
+    color: white;
+    text-align: left;
+    padding: 25px 10% 25px 10%;
+    font-size: 130%;
+    min-height: 84px;
+}
+
+.redes-perfil {
+    padding: 25px 10% 25px 10%;
+    text-align: center;
 }
