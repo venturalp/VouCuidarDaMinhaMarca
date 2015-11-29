@@ -72,7 +72,7 @@ Confira alguns dos itens que fazem parte:</h2>
             <div>
                 <label for="cidade">Cidade/Estado:</label>
                 <input type="text" id="cidade" required/>
-                <label for="cidade">Por que você precisa deste projeto?:</label>
+                <label for="porque">Por que você precisa deste projeto?:</label>
                 <textarea id="porque"></textarea>
                 <input type="button" id="enviar" value="ENVIAR"/>
             </div>

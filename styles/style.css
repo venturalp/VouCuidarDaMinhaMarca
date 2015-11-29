@@ -2,6 +2,19 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+@font-face {
+	font-family:'Xiomara-Regular';
+	src: url('../fonts/Xiomara_gdi.eot');
+	src: url('../fonts/Xiomara_gdi.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Xiomara_gdi.woff') format('woff'),
+		url('../fonts/Xiomara_gdi.ttf') format('truetype'),
+		url('../fonts/Xiomara_gdi.svg#Xiomara-Regular') format('svg');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-2265;
+}
+
 h1 {
     font: 900 350% 'Open Sans', sans-serif;
 }
@@ -18,6 +31,10 @@ h3 {
     font: 900 220% 'Open Sans', sans-serif;
 }
 
+.white{
+    color: #fff;
+}
+
 body {
     padding: 0px;
     margin: 0px;
@@ -30,6 +47,10 @@ header {
     padding-top: 5px;
     padding-bottom: 10px;
     height: 110px;
+}
+
+.center{
+    margin: 0 auto;
 }
 
 .container-menu {
@@ -268,7 +289,7 @@ input:-moz-placeholder {
     vertical-align: top;
 }
 
-.services-block:last-child {
+.web-motivo:last-child {
     margin-right: 0px !important;
 }
 
@@ -281,6 +302,13 @@ input:-moz-placeholder {
     font: 900 30px / 32px 'Open Sans', sans-serif;
     text-align: center;
 }
+
+.web-motivo h1 {
+    color: #9f9f9f;
+    font: 900 30px / 32px 'Open Sans', sans-serif;
+    text-align: center;
+}
+
 
 .agencia-container h1 {
     text-align: center;
@@ -310,6 +338,12 @@ input:-moz-placeholder {
 .services-block p {
     font: 16px / 22px 'Open Sans', sans-serif;
     color: #a0a0a0;
+    text-align: center;
+}
+
+.web-motivo p {
+    font: 16px / 22px 'Open Sans', sans-serif;
+    color: #9f9f9f;
     text-align: center;
 }
 
@@ -1123,4 +1157,226 @@ textarea{
 .redes-perfil {
     padding: 25px 10% 25px 10%;
     text-align: center;
+}
+
+
+
+
+
+.redes-rodape {
+       margin: 0 auto;
+}
+
+.redes-detalhes {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.redes-list:first-child{
+    margin-right: 10%;
+}
+
+.redes-list {
+    width: 42%;
+    display: inline-block;
+    list-style: decimal;
+    color: #444444;
+    font-weight: 700;
+    font-size: 100%;
+}
+
+.redes-planos{
+    display: block;
+}
+
+.bt-redes-comprar, .bt-redes-comprar:hover, .bt-redes-comprar:focus {
+    background-color: #ff8000;
+    color: #FFF;
+    width: 100%;
+    display: inline-block;
+    margin-right: 2px;
+    padding: 12px 0 12px 0;
+    text-align: center;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.redes-planos-cell img{
+    margin: 0;
+}
+
+.redes-planos-cell {
+    display: table-cell;
+    table-layout: fixed;
+    width: 316px;
+    padding-right: 6px;
+}
+
+.redes-planos-center {
+    width: 50%;
+}
+
+.redes-gostaria h2{
+    margin: 0px;
+}
+
+.redes-gostaria {
+    background-color: #595959;
+    padding: 20px 15% 20px 15%;
+    color: #fff;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.redes-form h2{
+    margin: 0px;
+    text-align: center;
+}
+
+.redes-form textarea{
+    width: 100%;
+    height: 200px;
+}
+
+.redes-form input[type="button"]{
+    background-color: #595959;
+    border: 1px solid #595959;
+    color: white;
+    font: 900 100% 'Open Sans', sans-serif;
+    padding: 5px 30px 5px 30px;
+    position: relative;
+    width: auto !important;
+    left: 50%;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    margin: 30px 0 30px 0;
+}
+
+.redes-form {
+    color: #9f9f9f;
+}
+
+.redes-form-container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.inline-form, .inline-form input {
+    display: inline-block;
+    width: 100%;
+}
+
+.inline-form label{
+    display: inline-block;
+    width: 40%;
+}
+
+.inline-form label:last-child{
+    float: right;
+}
+
+
+.art-web-1  h1 span{
+    color: #d8ff00;
+    font-family: 'Xiomara-Regular';
+    font-size: 170%;
+    font-weight: 400;
+    margin-left: 10%;
+}
+
+.art-web-1  h1, .art-web-1  p{
+    margin: 0;
+}
+
+.art-web-1 p{
+    font-size: 140%;
+    width: 44%;
+    font-weight: 700;
+}
+
+.faixa-web{
+    background-color: #d8ff01;
+    height: 15px;
+}
+
+.art-web-1 {
+    background-color: #748cb2;
+    padding: 0 15% 50px 15%;
+}
+
+.web-globo {
+    position: absolute;
+    z-index: 999;
+    right: 35%;
+    margin-top: -120px;
+}
+
+.art-web-2 h2{
+    font-family: 'Xiomara-Regular';
+    color: #738cb2;
+    font-size: 335%;
+    width: 30%;
+    text-align: left;
+    font-weight: 400;
+    padding-left: 15%;
+    margin: 0;
+}
+
+.web-motivos {
+    position: relative;
+    height: 100%;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    vertical-align: bottom;
+    padding-top: 30px;
+    margin-bottom: 20px;
+}
+
+.web-motivo {
+    width: 225px;
+    min-width: 12%;
+    text-align: center;
+    margin-right: 100px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.web-naoespere-h2:last-child{
+    margin-left: 15%;
+    width: 38%;
+    font-size: 215%;
+}
+
+.web-naoespere h2:first-child{
+    font: 900 260% 'Open Sans', sans-serif;
+}
+
+.web-naoespere {
+    background-color: #e9730e;
+    padding: 20px 0 30px 0;
+}
+
+.italic {
+    font-style: italic;
+}
+
+
+
+.faixa-web2 {
+    background-color: #333333;
+    height: 105px;
+}
+
+.web-business {
+    position: absolute;
+    z-index: 999;
+    right: 15%;
+    margin-top: -436px;
 }

@@ -84,8 +84,72 @@
             <h2 class="redes-perfil">Para se manter um perfil em qualquer rede social é preciso de constantes atualizações e capacidade para responder às demandas dos clientes. E a VOU CUIDAR DA MINHA MARCA também                           orienta pequenos empresários, que acreditam na força das redes sociais, mas não sabem como, nem por onde começar.<br><br>
                     Se você se encaixa nesse perfil, fale com a gente. Estamos aqui para ajudar que o seu negócio ganhe o destaque e o valor que merece, e fique por dentro de tudo o que é dito sobre sua empresa.
             </h2>
-            <h3 class="cinza txtCenter">ESCOLHA O PLANO QUE MELHOR SE ENCAIXA NO SEU ORÇAMENTO E NECESSIDADE.</h3>
         </article>
+        <section>
+            <article class="redes-rodape">
+                <div class="redes-detalhes">
+                    <h3 class="cinza txtCenter">ESCOLHA O PLANO QUE MELHOR SE ENCAIXA NO SEU ORÇAMENTO E NECESSIDADE.</h3>
+                    <div>
+                        <ul class="redes-list">
+                            <p>O QUE VAMOS FAZER:</p>
+                            <li>Criar o perfil da sua empresa nas redes sociais.</li>
+                            <li>Elaborar as pautas, artes e a estratégia de difusão nas redes escolhidas.</li>
+                            <li>Publicar o conteúdo 3, 5 ou 7 vezes por semana (conforme o plano escolhido).</li>
+                            <li>Responder os comentários e mensagens dos membros da rede social.</li>
+                            <li>Enviar relatórios mensais dos resultados com o número de pessoas atingidas, mensagens postadas, comentários respondidos, etc.</li>
+                        </ul>
+                        <ul class="redes-list">
+                            <p>O QUE VAMOS FAZER:</p>
+                            <li>Criar o perfil da sua empresa nas redes sociais.</li>
+                            <li>Elaborar as pautas, artes e a estratégia de difusão nas redes escolhidas.</li>
+                            <li>Publicar o conteúdo 3, 5 ou 7 vezes por semana (conforme o plano escolhido).</li>
+                            <li>Responder os comentários e mensagens dos membros da rede social.</li>
+                            <li>Enviar relatórios mensais dos resultados com o número de pessoas atingidas, mensagens postadas, comentários respondidos, etc.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="redes-planos">
+                    <div class="redes-planos-center center">
+                        <div class="redes-planos-cell">
+                            <img src="images/redes-plano1.png"/>
+                            <a href="#" class="bt-redes-comprar">CONTRATAR</a>
+                        </div>
+                        <div class="redes-planos-cell">
+                            <img src="images/redes-plano2.png"/>
+                            <a href="#" class="bt-redes-comprar">CONTRATAR</a>
+                        </div>
+                        <div class="redes-planos-cell">
+                            <img src="images/redes-plano3.png"/>
+                            <a href="#" class="bt-redes-comprar">CONTRATAR</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="redes-gostaria"><h2>GOSTARIA DE UM PLANO PERSONALIZADO?</h2></div>
+                <div class="redes-form-container">
+                    <form class="form-registro redes-form">
+                        <h2>Preencha os campos abaixo que entraremos em contato com você.</h2>
+                        <label for="nome">Nome completo:</label>
+                        <input type="text" id="name" required/>
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" required/>
+                        <label for="empresa">Nome da empresa:</label>
+                        <input type="text" id="empresa" required/>
+                        <div class="inline-form">
+                            <label for="ramo">Telefone:
+                                <input type="text" id="telefone" required/>
+                            </label>
+
+                            <label for="ramo">Cidade/Estado:
+                                <input type="text" id="cidade" required/>
+                            </label>
+                        </div>
+                        <label for="como">Como gostaria que fosse seu plano:</label>
+                        <textarea id="como"></textarea>
+                        <input type="button" id="enviar" value="ENVIAR"/>
+                    </form>
+                </div>
+            </article>
+        </section>
     </section>
 
     <div class="clearfix"></div>
