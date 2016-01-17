@@ -9,7 +9,7 @@
     </section>
     <section class="services">
         <h1 class="txtCenter cinza">Conheça nossos serviços e faça a diferença.</h1>
-        <div class="services-blocks">
+        <div class="services-container">
             <div class="services-block">
                 <img src="images/icon_registro_red.png" />
                 <h1>Registre sua marca</h1>

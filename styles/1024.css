@@ -222,7 +222,7 @@
         width: 48% !important;
     }
     .logo2 h2 {
-        padding: 0px 4% 0px 4% !important;
+        padding: 0px 4% 20px 4% !important;
     }
     .logo3 {
         padding: 30px 2% 30px 2% !important;
@@ -239,7 +239,7 @@
     .redes-agencia-p {
         margin-right: 0% !important;
         width: 68% !important;
-        font: 900 244% 'Open Sans', sans-serif !important;
+        font: 900 36px 'Open Sans', sans-serif !important;
     }
     .redes-blocos {
         width: 98% !important;
@@ -252,13 +252,154 @@
         -webkit-transform: translateY(-50%) !important;
     }
     .redes-circulo p {
-        transform: translateY(-45%) !important;
-        -ms-transform: translateY(-45%) !important;
-        -o-transform: translateY(-45%) !important;
-        -webkit-transform: translateY(-45%) !important;
-        font: 900 200% "Open Sans", sans-serif !important;
+        transform: none !important;
+        -ms-transform: none !important;
+        -o-transform: none !important;
+        -webkit-transform: none !important;
+        font: 900 42px "Open Sans", sans-serif !important;
     }
     .frases-bloco {
         padding: 10px 5% 10px 5% !important;
+    }
+    .registro-alerta:after {
+        top: -25px;
+        position: absolute;
+    }
+    .form-registro input {
+        padding: 25px 2px 25px 2px !important;
+        font-size: 30px !important;
+    }
+    .form-registro label {
+        font-size: 30px !important;
+    }
+    .reg6-container h2 {
+        font-size: 51px !important;
+    }
+    .contato input[type="button"],
+    .reg6-container input[type="button"],
+    .breafing input[type="button"] {
+        font: 900 30px 'Open Sans', sans-serif !important;
+        padding: 25px 30px 25px 30px !important;
+        width: 100% !important;
+        margin-top: 30px;
+    }
+    .blocos-logo div p {
+        font-size: 25px !important;
+    }
+    .logo-verde1 {
+        margin-top: 850px !important;
+    }
+    .redes-h2 {
+        padding: 20px 8% 30px 8% !important;
+    }
+    .rede-posicionar p {
+        text-align: left !important;
+        font: 900 22px 'Open Sans', sans-serif !important;
+        width: 100% !important;
+        left: 0px !important;
+        -webkit-transform: none !important;
+        -ms-transform: none !important;
+        transform: none !important;
+        margin-top: 20px;
+    }
+    .redes-bloco-text {
+        font: 400 italic 24px 'Open Sans', sans-serif !important;
+    }
+    .frases-bloco {
+        font-size: 26px !important;
+    }
+    .redes-detalhes {
+        width: 100% !important;
+    }
+    .redes-list:first-child {
+        margin-top: 60px;
+        margin-right: 0px !important;
+    }
+    .redes-list {
+        width: 80% !important;
+        font-size: 21px !important;
+        margin-bottom: 60px !important;
+        position: relative;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    .redes-form-container {
+        width: 90% !important;
+    }
+    .redes-form h2 {
+        font-size: 45px !important;
+    }
+    .inline-form label {
+        width: 45% !important;
+    }
+    .redes-form input[type="button"] {
+        width: 100% !important;
+    }
+    .art-web-1 h1 span {
+        margin-left: 0px !important;
+        display: block !important;
+        position: relative !important;
+        margin-top: -50px !important;
+    }
+    .web-globo {
+        right: 16% !important;
+        margin-top: -220px !important;
+    }
+    .art-web-1 p {
+        width: 52% !important;
+    }
+    .art-web-2 h2 {
+        font-size: 50px !important;
+        width: 78% !important;
+        text-align: center !important;
+        padding-left: 0px !important;
+        margin: 0;
+        left: 50% !important;
+        position: relative !important;
+        transform: translateX(-50%) !important;
+        margin-top: 40px !important;
+    }
+    .web-motivo {
+        min-width: 100% !important;
+        width: auto !important;
+        text-align: center;
+        margin-right: 0px !important;
+        margin-bottom: 30px;
+    }
+    .web-motivo p {
+        font-size: 30px !important;
+        line-height: 128% !important;
+        padding: 0 30px 0 30px !important;
+    }
+    .web-naoespere-h2:last-child {
+        margin-left: 30px !important;
+        width: 58% !important;
+        font-size: 32px !important;
+        margin-bottom: 60px !important;
+    }
+    .web-business {
+        right: -120px !important;
+    }
+    .registro4 p {
+        font: 100 28px 'Open Sans', sans-serif !important;
+    }
+    .reg-block p {
+        font: 100 28px 'Open Sans', sans-serif !important;
+    }
+    .redes-form input[type="button"] {
+        width: 100% !important;
+    }
+    .jobBlock h1 {
+        font-size: 42px !important;
+    }
+    .jobBlock a,
+    .jobBlock a:active,
+    .jobBlock a:focus,
+    .jobBlock a:visited,
+    .jobBlock p {
+        font-size: 30px !important;
+        margin-bottom: 10px !important;
     }
 }

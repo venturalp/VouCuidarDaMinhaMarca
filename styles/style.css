@@ -4,20 +4,17 @@
 }
 
 @font-face {
-	font-family:'Xiomara-Regular';
-	src: url('../fonts/Xiomara_gdi.eot');
-	src: url('../fonts/Xiomara_gdi.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Xiomara_gdi.woff') format('woff'),
-		url('../fonts/Xiomara_gdi.ttf') format('truetype'),
-		url('../fonts/Xiomara_gdi.svg#Xiomara-Regular') format('svg');
-	font-weight: 400;
-	font-style: normal;
-	font-stretch: normal;
-	unicode-range: U+0020-2265;
+    font-family: 'Xiomara-Regular';
+    src: url('../fonts/Xiomara_gdi.eot');
+    src: url('../fonts/Xiomara_gdi.eot?#iefix') format('embedded-opentype'), url('../fonts/Xiomara_gdi.woff') format('woff'), url('../fonts/Xiomara_gdi.ttf') format('truetype'), url('../fonts/Xiomara_gdi.svg#Xiomara-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-2265;
 }
 
 h1 {
-    font: 900 350% 'Open Sans', sans-serif;
+    font: 900 42px 'Open Sans', sans-serif;
 }
 
 .cinza {
@@ -25,14 +22,14 @@ h1 {
 }
 
 h2 {
-    font: 900 175% 'Open Sans', sans-serif;
+    font: 900 26px 'Open Sans', sans-serif;
 }
 
 h3 {
-    font: 900 220% 'Open Sans', sans-serif;
+    font: 900 35px 'Open Sans', sans-serif;
 }
 
-.white{
+.white {
     color: #fff;
 }
 
@@ -50,7 +47,7 @@ header {
     height: 110px;
 }
 
-.center{
+.center {
     margin: 0 auto;
 }
 
@@ -310,7 +307,6 @@ input:-moz-placeholder {
     text-align: center;
 }
 
-
 .agencia-container h1 {
     text-align: center;
     margin: 0;
@@ -333,7 +329,7 @@ input:-moz-placeholder {
 
 .sec-sobre p {
     color: #000000;
-    font: 100 204% 'Open Sans', sans-serif;
+    font: 100 25px 'Open Sans', sans-serif;
 }
 
 .services-block p {
@@ -386,7 +382,7 @@ input:-moz-placeholder {
 }
 
 .faixa-verde p {
-    font: 900 220% 'Open Sans', sans-serif;
+    font: 900 30px 'Open Sans', sans-serif;
     color: #ffffff;
     text-align: center;
     margin: 0;
@@ -620,14 +616,14 @@ footer a:hover {
 }
 
 .registro1 p {
-    font: 700 175% 'Open Sans', sans-serif;
+    font: 700 25px 'Open Sans', sans-serif;
     width: 70%;
     margin: 0 auto;
     text-align: center;
 }
 
 .registro2 p {
-    font: 700 168% 'Open Sans', sans-serif;
+    font: 700 24px 'Open Sans', sans-serif;
     margin: 0 auto;
     text-align: left;
     color: white;
@@ -662,7 +658,7 @@ footer a:hover {
 
 .registro3 p {
     color: #999999;
-    font: 700 196% 'Open Sans', sans-serif;
+    font: 700 27px 'Open Sans', sans-serif;
     text-align: center;
 }
 
@@ -678,7 +674,7 @@ footer a:hover {
 }
 
 .registro4 p {
-    font: 100 120% 'Open Sans', sans-serif;
+    font: 100 18px 'Open Sans', sans-serif;
 }
 
 .reg-block {
@@ -690,7 +686,7 @@ footer a:hover {
 }
 
 .reg-block p {
-    font: 100 145% 'Open Sans', sans-serif;
+    font: 100 20px 'Open Sans', sans-serif;
 }
 
 .reg-block div {
@@ -720,6 +716,7 @@ footer a:hover {
 
 .form-registro label {
     font-weight: 900;
+    font-size: 20px;
 }
 
 .form-registro input,
@@ -732,7 +729,9 @@ footer a:hover {
     text-align: center;
 }
 
-.reg6-container input[type="button"], .breafing input[type="button"]{
+.contato input[type="button"],
+.reg6-container input[type="button"],
+.breafing input[type="button"] {
     background-color: #595959;
     border: 1px solid #595959;
     color: white;
@@ -770,11 +769,10 @@ footer a:hover {
     background-color: #eeeeee;
     padding: 5px 2px 5px 2px;
     color: #9f9f9f;
-    font: 100 120% 'Open Sans', sans-serif;
+    font: 100 20px 'Open Sans', sans-serif;
 }
 
-
-textarea{
+textarea {
     border-left-style: none;
     border-top-style: none;
     border-right-color: #9f9f9f;
@@ -802,12 +800,14 @@ textarea{
 .logo1 p {
     margin: 0;
     padding: 0;
-    width: 220px;
+    width: 320px;
     position: absolute;
-    bottom: 3%;
+    bottom: 18%;
     left: 48%;
-    font-size: 175%;
+    font-size: 40px;
     color: white;
+    font-weight: 700;
+    font-style: italic;
 }
 
 .logo1 {
@@ -832,7 +832,7 @@ textarea{
 .faixa-verde-logo h2 {
     margin: 0;
     padding: 0;
-    font-size: 270%;
+    font-size: 38px;
     font-weight: 900;
 }
 
@@ -843,6 +843,7 @@ textarea{
     margin: 0px;
     padding: 15px 0 10px 0;
 }
+
 .faixa-logo {
     position: relative;
     left: 50%;
@@ -853,22 +854,23 @@ textarea{
     margin-top: 30px;
 }
 
-.blocos-logo div p{
+.blocos-logo div p {
     margin: 0px;
     font-style: italic;
-    font-size: 140%;
+    font-size: 19px;
     font-weight: normal;
     padding: 0px 30px 0px 30px;
 }
-.blocos-logo div h3{
+
+.blocos-logo div h3 {
     margin: 0px;
     padding: 50px 30px 0px 30px;
     font-weight: 900;
 }
 
-.blocos-logo div{
+.blocos-logo div {
     width: 24%;
-    height: 540px;
+    min-height: 450px;
     display: inline-block;
     margin: 0px;
     padding: 0px;
@@ -876,13 +878,14 @@ textarea{
     color: #ffffff;
     font-family: "Open Sans";
 }
+
 .blocos-logo {
     width: 60%;
     margin: 0 auto;
     margin-top: 30px;
     margin-bottom: 30px;
     display: block;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 .bloco-roxo {
@@ -901,7 +904,7 @@ textarea{
     background-color: #04756f;
 }
 
-.logo2 h2{
+.logo2 h2 {
     padding: 0px 24% 0px 24%;
     text-align: center;
 }
@@ -931,7 +934,7 @@ textarea{
     font-weight: 100 !important;
 }
 
-.breafing h3:first-child{
+.breafing h3:first-child {
     text-align: center;
 }
 
@@ -939,7 +942,7 @@ textarea{
     padding: 10px 0 30px 0;
 }
 
-.breafing form{
+.breafing form {
     width: 50% !important;
     position: relative;
     left: 50%;
@@ -949,41 +952,46 @@ textarea{
     -o-transform: translateX(-50%);
 }
 
-.briefing-div div:last-child{
+.briefing-div div:last-child {
     float: right;
 }
-.briefing-div div:first-child{
+
+.briefing-div div:first-child {
     margin-right: 30px;
 }
 
-.briefing-div div{
+.briefing-div div {
     width: 48%;
     display: inline-block;
 }
 
-.radiogroup input{
+.radiogroup input {
     float: left !important;
 }
 
-.radiogroup{
+.radiogroup {
     width: 100% !important;
 }
-.radiogroup input, .radiogroup label{
+
+.radiogroup input,
+.radiogroup label {
     display: inline-block !important;
     float: left !important;
     width: auto !important;
+    font-size: 16px;
+    font-weight: 500;
 }
 
-.radiogroup label{
+.radiogroup label {
     margin-right: 30px;
 }
 
-.breafing textarea{
+.breafing textarea {
     width: 100%;
     height: 220px;
 }
 
-.breafing input[type="button"]{
+.breafing input[type="button"] {
     width: auto !important;
 }
 
@@ -991,23 +999,25 @@ textarea{
     margin-bottom: 30px;
 }
 
-.rede-posicionar p{
+.rede-posicionar p {
     text-align: right;
-    font: 900 120% 'Open Sans', sans-serif;
+    font: 900 17px 'Open Sans', sans-serif;
     color: #365c94;
     width: 70%;
     left: 100%;
+    -webkit-transform: translateX(-120%);
+    -ms-transform: translateX(-120%);
     transform: translateX(-120%);
     position: relative;
 }
 
-.rede-posicionar img:first-child{
+.rede-posicionar img:first-child {
     margin-top: -60px;
     width: 24%;
     height: auto;
 }
 
-.rede-quero-posicionar{
+.rede-quero-posicionar {
     width: 65%;
     height: auto;
     margin-bottom: 5px;
@@ -1021,14 +1031,12 @@ textarea{
     padding-bottom: 60px;
 }
 
-
-
 .redes-h2 {
     text-align: center;
     padding: 20px 8% 20px 8%;
 }
 
-.redes-agencia img:first-child{
+.redes-agencia img:first-child {
     margin-top: -6%;
     width: 32%;
     height: auto;
@@ -1041,7 +1049,7 @@ textarea{
 .redes-agencia-p {
     display: inline-block;
     vertical-align: top;
-    font: 900 380% 'Open Sans', sans-serif;
+    font: 900 53px 'Open Sans', sans-serif;
     text-align: right;
     margin-top: 1%;
     margin-right: 8%;
@@ -1049,17 +1057,16 @@ textarea{
     width: 60%;
 }
 
-
-
-.redes-bloco-text{
+.redes-bloco-text {
     color: white;
-    font: 400 italic 125% 'Open Sans', sans-serif;
+    font: 400 italic 20px 'Open Sans', sans-serif;
     padding-left: 5%;
     padding-right: 5%;
     margin: 0;
+    margin-top: 20px;
 }
 
-.redes-bloco{
+.redes-bloco {
     width: 33%;
     display: table-cell;
     min-height: 250px;
@@ -1069,7 +1076,7 @@ textarea{
     border-right: 8px solid white;
 }
 
-.redes-bloco:last-child{
+.redes-bloco:last-child {
     margin-right: 0px;
     border: 0px;
 }
@@ -1094,13 +1101,10 @@ textarea{
     background-color: #e4902d;
 }
 
-.redes-circulo p{
+.redes-circulo p {
     position: relative;
-    transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    font: 900 200% "Open Sans", sans-serif;
+    font: 900 40px "Open Sans", sans-serif;
+    padding-top: 8px;
 }
 
 .redes-circulo {
@@ -1130,28 +1134,33 @@ textarea{
 
 .redes-oque {
     display: block;
-    text-align: center
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-.frases-bloco:nth-child(1), .frases-bloco:nth-child(4), .frases-bloco:nth-child(7) {
+.frases-bloco:nth-child(1),
+.frases-bloco:nth-child(4),
+.frases-bloco:nth-child(7) {
     background-color: #96c846;
 }
 
-
-.frases-bloco:nth-child(2), .frases-bloco:nth-child(5), .frases-bloco:nth-child(8) {
+.frases-bloco:nth-child(2),
+.frases-bloco:nth-child(5),
+.frases-bloco:nth-child(8) {
     background-color: #00a274;
 }
 
-.frases-bloco:nth-child(3), .frases-bloco:nth-child(6), .frases-bloco:nth-child(9) {
+.frases-bloco:nth-child(3),
+.frases-bloco:nth-child(6),
+.frases-bloco:nth-child(9) {
     background-color: #009ab7;
 }
-
 
 .frases-bloco {
     color: white;
     text-align: left;
     padding: 25px 10% 25px 10%;
-    font-size: 130%;
+    font-size: 20px;
     min-height: 84px;
 }
 
@@ -1160,12 +1169,8 @@ textarea{
     text-align: center;
 }
 
-
-
-
-
 .redes-rodape {
-       margin: 0 auto;
+    margin: 0 auto;
 }
 
 .redes-detalhes {
@@ -1173,7 +1178,7 @@ textarea{
     margin: 0 auto;
 }
 
-.redes-list:first-child{
+.redes-list:first-child {
     margin-right: 10%;
 }
 
@@ -1183,14 +1188,16 @@ textarea{
     list-style: decimal;
     color: #444444;
     font-weight: 700;
-    font-size: 100%;
+    font-size: 16px;
 }
 
-.redes-planos{
+.redes-planos {
     display: block;
 }
 
-.bt-redes-comprar, .bt-redes-comprar:hover, .bt-redes-comprar:focus {
+.bt-redes-comprar,
+.bt-redes-comprar:hover,
+.bt-redes-comprar:focus {
     background-color: #ff8000;
     color: #FFF;
     width: 100%;
@@ -1202,7 +1209,7 @@ textarea{
     text-decoration: none;
 }
 
-.redes-planos-cell img{
+.redes-planos-cell img {
     margin: 0;
 }
 
@@ -1214,10 +1221,14 @@ textarea{
 }
 
 .redes-planos-center {
-    width: 50%;
+    display: inline-block;
+    margin: 0 auto;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
 }
 
-.redes-gostaria h2{
+.redes-gostaria h2 {
     margin: 0px;
 }
 
@@ -1230,24 +1241,26 @@ textarea{
     text-align: center;
 }
 
-.redes-form h2{
+.redes-form h2 {
     margin: 0px;
     text-align: center;
+    font-size: 27.7px;
+    margin-bottom: 30px;
 }
 
-.redes-form textarea{
+.redes-form textarea {
     width: 100%;
     height: 200px;
 }
 
-.redes-form input[type="button"]{
+.redes-form input[type="button"] {
     background-color: #595959;
     border: 1px solid #595959;
     color: white;
     font: 900 100% 'Open Sans', sans-serif;
     padding: 5px 30px 5px 30px;
     position: relative;
-    width: auto !important;
+    width: auto;
     left: 50%;
     transform: translateX(-50%);
     -ms-transform: translateX(-50%);
@@ -1265,40 +1278,45 @@ textarea{
     margin: 0 auto;
 }
 
-.inline-form, .inline-form input {
+.inline-form,
+.inline-form input {
     display: inline-block;
     width: 100%;
 }
 
-.inline-form label{
+.inline-form label {
     display: inline-block;
     width: 40%;
 }
 
-.inline-form label:last-child{
+.inline-form label:last-child {
     float: right;
 }
 
-
-.art-web-1  h1 span{
+.art-web-1 h1 span {
     color: #d8ff00;
     font-family: 'Xiomara-Regular';
-    font-size: 170%;
+    font-size: 120px;
     font-weight: 400;
-    margin-left: 10%;
+    margin-left: 50px;
 }
 
-.art-web-1  h1, .art-web-1  p{
+.art-web-1 h1,
+.art-web-1 p {
     margin: 0;
 }
 
-.art-web-1 p{
-    font-size: 140%;
-    width: 44%;
+.art-web-1 h1{
+    font-size: 60px;
+}
+
+.art-web-1 p {
+    font-size: 25px;
+    width: 48%;
     font-weight: 700;
 }
 
-.faixa-web{
+.faixa-web {
     background-color: #d8ff01;
     height: 15px;
 }
@@ -1311,15 +1329,15 @@ textarea{
 .web-globo {
     position: absolute;
     z-index: 999;
-    right: 35%;
+    right: 28%;
     margin-top: -120px;
 }
 
-.art-web-2 h2{
+.art-web-2 h2 {
     font-family: 'Xiomara-Regular';
     color: #738cb2;
-    font-size: 335%;
-    width: 30%;
+    font-size: 50px;
+    width: 45%;
     text-align: left;
     font-weight: 400;
     padding-left: 15%;
@@ -1349,14 +1367,15 @@ textarea{
     vertical-align: top;
 }
 
-.web-naoespere-h2:last-child{
+.web-naoespere-h2:last-child {
     margin-left: 15%;
     width: 38%;
-    font-size: 215%;
+    font-size: 35px;
+    margin-bottom: 60px;
 }
 
-.web-naoespere h2:first-child{
-    font: 900 260% 'Open Sans', sans-serif;
+.web-naoespere h2:first-child {
+    font: 900 40px 'Open Sans', sans-serif;
 }
 
 .web-naoespere {
@@ -1367,8 +1386,6 @@ textarea{
 .italic {
     font-style: italic;
 }
-
-
 
 .faixa-web2 {
     background-color: #333333;
@@ -1383,9 +1400,64 @@ textarea{
 }
 
 .btMaisHome {
-        width: 100%;
+    width: 100%;
     display: block;
     text-align: center;
     padding-bottom: 30px;
     margin-top: 30px;
+}
+
+.cli-container1 {
+    margin: 0 auto;
+    margin-top: 45px;
+}
+
+.sec-clientes {
+    margin-bottom: 45px;
+}
+
+.jobBlock h1 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.jobBlock a,
+.jobBlock a:active,
+.jobBlock a:focus,
+.jobBlock a:visited,
+.jobBlock p {
+    margin: 0;
+    color: #9f9f9f;
+}
+
+.jobBlock img {
+    box-shadow: 1px 1px 10px #fff;
+}
+
+.jobBlock {
+    text-align: center;
+    margin-bottom: 45px;
+    padding: 0px 10px 0px 10px;
+}
+
+.contato-container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.contato {
+    border-top: 8px solid #eee;
+    color: #9f9f9f;
+}
+.services-container{
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    display: inline-block;
+}
+
+.services-container div:last-child{
+    margin-right: 0px !important;
 }
