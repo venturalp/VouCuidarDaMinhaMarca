@@ -1,0 +1,44 @@
+@media screen and (max-width: 1366px) and (min-width: 1281px) {
+    .breafing form {
+        width: 56% !important;
+    }
+    .art-web-1 {
+        padding: 0 3% 50px 3% !important;
+    }
+    .art-web-2 h2 {
+        width: 55% !important;
+    }
+    .web-motivo {
+        margin-right: 36px !important;
+    }
+    .web-naoespere-h2:last-child {
+        margin-left: 5% !important;
+        width: 48% !important;
+    }
+    .web-business {
+        right: 5% !important;
+    }
+    .web-globo {
+        right: 17% !important;
+    }
+
+    .breafing form {
+    width: 60% !important;
+    }
+
+    .blocos-logo {
+    width: 90% !important;
+    }
+
+    .logo2 h2 {
+    padding: 0px 10% 0px 10% !important;
+
+    margin-bottom: 30px !important;
+    }
+
+
+.redes-agencia-p {
+
+    font: 900 44px 'Open Sans', sans-serif !important;
+}
+}

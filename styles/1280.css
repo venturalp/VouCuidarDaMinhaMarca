@@ -1,14 +1,51 @@
-
-@media screen and (max-width: 1280px) and (min-width: 1025px){
-    .jobBlock{
-        -webkit-transform: scale(0.7);-ms-transform: scale(0.7);transform: scale(0.7) ;
+@media screen and (max-width: 1280px) and (min-width: 1025px) {
+    .jobBlock {
+        -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+        transform: scale(0.7);
         padding: 0px 6px 0px 6px !important;
     }
-    .jobBlock h1{
+    .jobBlock h1 {
         font-size: 30px !important;
     }
-
-    .jobBlock p,.jobBlock a{
+    .jobBlock p,
+    .jobBlock a {
         font-size: 20px;
+    }
+    .blocos-logo {
+        width: 90% !important;
+    }
+    .logo2 h2 {
+        padding: 0px 10% 0px 10% !important;
+    }
+    .breafing form {
+        width: 60% !important;
+    }
+    .redes-agencia-p {
+        font: 900 40px 'Open Sans', sans-serif !important;
+    }
+    .art-web-1 {
+        padding: 0 2% 50px 2% !important;
+    }
+    .art-web-1 h1 {
+        font-size: 56px !important;
+    }
+    .web-globo {
+        right: 16% !important;
+        margin-top: -140px !important;
+    }
+    .art-web-2 h2 {
+        width: 65% !important;
+        padding-left: 8% !important;
+    }
+    .web-naoespere h2:first-child {
+        font: 900 35px 'Open Sans', sans-serif !important;
+    }
+    .web-naoespere-h2:last-child {
+        margin-left: 7% !important;
+        width: 46% !important;
+    }
+    .web-business {
+        right: 0% !important;
     }
 }

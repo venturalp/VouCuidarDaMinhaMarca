@@ -943,7 +943,7 @@ textarea {
 }
 
 .breafing form {
-    width: 50% !important;
+    width: 50%;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -1461,3 +1461,8 @@ textarea {
 .services-container div:last-child{
     margin-right: 0px !important;
 }
+
+
+
+
+

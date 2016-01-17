@@ -1,4 +1,4 @@
-@media screen and (min-width: 1025px) and (max-width: 1600px){
+@media screen and (min-width: 1367px) and (max-width: 1680px) {
     .reg-block:last-child {
         margin-right: 15% !important;
     }
@@ -14,26 +14,34 @@
     .redes-blocos {
         width: 95% !important;
     }
-
     .redes-titulo-bloco {
-        font: 900 180% 'Open Sans', sans-serif !important;
-        transform: translateY(-50%) !important;
-        -ms-transform: translateY(-50%)!important;
-        -o-transform: translateY(-50%)!important;
-        -webkit-transform: translateY(-50%) !important;
+        font: 900 40px 'Open Sans', sans-serif !important;
+        padding-top: 20px;
+        -webkit-transform: none !important;
+        -ms-transform: none !important;
+        transform: none !important;
     }
     .redes-circulo p {
+        /*
         transform: translateY(-45%) !important;
         -ms-transform: translateY(-45%) !important;
         -o-transform: translateY(-45%) !important;
         -webkit-transform: translateY(-45%) !important;
-        font: 900 200% "Open Sans", sans-serif !important;
+*/
+        font: 900 40px "Open Sans", sans-serif !important;
     }
-
     .redes-agencia-p {
-        font: 900 280% 'Open Sans', sans-serif !important;
         margin-top: 2% !important;
         margin-right: -8% !important;
         width: 75% !important;
+    }
+    .art-web-1 {
+        padding: 0 5% 50px 12% !important;
+    }
+    .web-globo {
+        right: 20% !important;
+    }
+    .art-web-2 h2 {
+        width: 50% !important;
     }
 }
