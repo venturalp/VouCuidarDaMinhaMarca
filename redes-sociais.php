@@ -1,4 +1,71 @@
 <?php include("header.html"); ?>
+    <script>
+        $(document).ready(function () {
+            $('#enviar').click(function () {
+                $("#form-redes").submit(enviaDados);
+            });
+        });
+
+        function enviaDados() {
+            $.toast({
+                heading: 'Aguarde',
+                text: 'Seu email está sendo enviado!',
+                icon: 'info',
+                hideAfter: false,
+                allowToastClose: false,
+                position: 'top-center',
+                stack: 1
+            });
+
+            var dados = {
+                op: "redes",
+                empresa: $("#empresa").val(),
+                nome: $("#nome").val(),
+                telefone: $("#telefone").val(),
+                email: $("#email").val(),
+                cidade: $("#cidade").val(),
+                como: $("#como").val()
+            };
+
+            jQuery.ajax({
+                type: "POST",
+                url: "ajax.php",
+                data: dados,
+                success: function (data) {
+                    $.toast().reset('all');
+                    if (data == "failed") {
+                        $.toast({
+                            heading: 'Erro',
+                            text: 'Ocorreu um erro ao enviar mensagem, tente novamente!',
+                            icon: 'error',
+
+                            position: 'top-center'
+                        });
+                    } else {
+                        $('#form-redes').trigger("reset");
+                        $.toast({
+                            heading: 'Sucesso!',
+                            text: 'Email enviado com sucesso!',
+                            icon: 'success',
+
+                            position: 'top-center'
+                        });
+                    }
+
+                },
+                fail: function (data) {
+                    $.toast().reset('all');
+                    $.toast({
+                        heading: 'Erro',
+                        text: 'Ocorreu um erro ao enviar mensagem, tente novamente!',
+                        icon: 'error',
+
+                        position: 'top-center'
+                    });
+                }
+            });
+        }
+    </script>
     <img class="banner" src="images/banner_redes.jpg" />
     <section class="redes1">
         <h2 class="cinza redes-h2">Toda. Além de ser um meio de comunicação barato, você atinge milhares de pessoas, que podem replicar seu conteúdo para outras milhares de pessoas.</h2>
@@ -111,25 +178,26 @@
                 <div class="redes-planos">
                     <div class="redes-planos-center center">
                         <div class="redes-planos-cell">
-                            <img src="images/redes-plano1.png"/>
+                            <img src="images/redes-plano1.png" />
                             <a href="#" class="bt-redes-comprar">CONTRATAR</a>
                         </div>
                         <div class="redes-planos-cell">
-                            <img src="images/redes-plano2.png"/>
+                            <img src="images/redes-plano2.png" />
                             <a href="#" class="bt-redes-comprar">CONTRATAR</a>
                         </div>
                         <div class="redes-planos-cell">
-                            <img src="images/redes-plano3.png"/>
+                            <img src="images/redes-plano3.png" />
                             <a href="#" class="bt-redes-comprar">CONTRATAR</a>
                         </div>
                     </div>
                 </div>
-                <div class="redes-gostaria"><h2>GOSTARIA DE UM PLANO PERSONALIZADO?</h2></div>
+                <div class="redes-gostaria">
+                    <h2>GOSTARIA DE UM PLANO PERSONALIZADO?</h2></div>
                 <div class="redes-form-container">
-                    <form class="form-registro redes-form">
+                    <form class="form-registro redes-form" method="post" onsubmit="return false;" id="form-redes">
                         <h2>Preencha os campos abaixo que entraremos em contato com você.</h2>
                         <label for="nome">Nome completo:</label>
-                        <input type="text" id="name" required/>
+                        <input type="text" id="nome" required/>
                         <label for="email">E-mail:</label>
                         <input type="email" id="email" required/>
                         <label for="empresa">Nome da empresa:</label>
@@ -145,7 +213,7 @@
                         </div>
                         <label for="como">Como gostaria que fosse seu plano:</label>
                         <textarea id="como"></textarea>
-                        <input type="submit" id="enviar" value="ENVIAR"/>
+                        <input type="submit" id="enviar" value="ENVIAR" />
                     </form>
                 </div>
             </article>

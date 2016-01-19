@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html ng-app="ui.bootstrap.demo">
+
+<head>
+    <title>Leviora</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/general.css" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
+    <meta charset=utf-8>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1024">
+
+    <script src="js/angular.js"></script>
+    <script src="js/angular-animate.js"></script>
+    <script src="js/ui-bootstrap-tpls-0.14.3.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/mascara.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#menu-icon").click(function () {
+                $(".menu-mobile").slideToggle(600);
+                $("#menu-icon").toggleClass("nav-is-visible");
+            });
+        });
+
+        (function () {
+            if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+                var msViewportStyle = document.createElement("style");
+                msViewportStyle.appendChild(
+                    document.createTextNode("@-ms-viewport{width:auto!important}")
+                );
+                document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+            }
+        })();
+    </script>
+
+</head>
+
+<body ng-controller="IndexController">
+
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class='modal-header'>
+            <h3 class='modal-title'>Meus Pedidos</h3>
+        </div>
+        <div class='modal-body'>
+            <table class="table table-striped" id="tabelaPedidos">
+                <thead>
+                    <tr>
+                        <th>Pedido</th>
+                        <th>Porção</th>
+                        <th>Qtd</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="pedido in pedidos">
+                        <td>{{pedido.nome}}</td>
+                        <td>{{pedido.ml}}</td>
+                        <td>{{pedido.qtd}}</td>
+                        <td>{{pedido.valor | currency:'R$ '}}</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td><strong>Total</strong></td>
+                        <td></td>
+                        <td></td>
+                        <td><strong>{{ valorTotalPedidos | currency:'R$ ' }}</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+            <h3>
+          <div class="page-header">
+        <h3>Formulário de Envio</h3>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">Nome</span>
+            <input type="text" ng-model="nome" class="form-control" placeholder="" aria-describedby="basic-addon1" maxlength="100">
+        </div>
+        <br />
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">Email</span>
+            <input type="text" ng-model="email" class="form-control" placeholder="" aria-describedby="basic-addon1" maxlength="100">
+        </div>
+        <br />
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">Telefone</span>
+            <input type="text" ng-model="telefone" class="form-control" placeholder="" aria-describedby="basic-addon1" onkeyup="javascript:formataTelefone(this,event);" maxlength="14">
+        </div>
+        </div>
+        <div class='modal-footer'>
+            <span style='float:left'>{{mensagemValidacaoFormulario}}</span>
+            <button class='btn btn-success' type='button' ng-click='ok()'>Enviar Pedidos</button>
+            <button class='btn btn-default' type='button' ng-click='cancel()'>Cancelar</button>
+        </div>
+    </script>
+
+    <header>
+        <nav class="menu">
+            <ul>
+                <li class="item"><a href="#">Home</a></li>
+                <li class="item"><a href="#">Cardápio</a></li>
+                <li class="item"><a href="#">Como funciona</a></li>
+                <li class="item"><a href="#">Quem somos</a></li>
+                <li class="item"><a href="#">Contato</a></li>
+                <li class="item">
+                    <a href="#"><img src="images/icon-fb.png" /></a>
+                    <a href="#"><img src="images/icon-pinterest.png" /></a>
+                    <a href="#"><img src="images/icon-instagram.png" /></a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="menu-mobile">
+            <ul>
+                <li class="item"><a href="#">Home</a></li>
+                <li class="item"><a href="#">Cardápio</a></li>
+                <li class="item"><a href="#">Como funciona</a></li>
+                <li class="item"><a href="#">Quem somos</a></li>
+                <li class="item"><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+
+        <div style="width: 1024px;">
+            <a class="menu-trigger" id="menu-icon">
+                <span>MENU</span>
+            </a>
+        </div>
+        <div class="topo">
+            <img src="images/logo.png" />
+        </div>
+        <section class="produtos">
+            <div>
+                <img src="images/img-top.jpg" class="img-top" />
+            </div>
+            <header>
+                <h3>As saladas Leviora são opções perfeitas para os dias agitados e<br> mesmo assim, manter a alimentação leve e o corpo saudável.</h3>
+                <h3>Monte seu pedido por meio do formulário abaixo e nos envie.<br>Entraremos em contato rapidamente. Se preferir peça pelo Whatsapp: <a href="tel:11994272049">11 99427.2049</a></h3>
+                <h3>Os pedidos deverão ser realizados com antecedência de um dia e até às 16h.</h3>
+            </header>
+
+            <article>
+                <div class="row">
+                    <div class="linha">
+                        <div class="col-sm-3">
+                            <img src="images/salada-omega.jpg" />
+                            <h3>Salada Ômega 3</h3>
+                            <p class="ingredient">Atum, cenoura, milho e molho de iogurte com hortelã </p>
+                            <div class="counter-container">
+                                <p class="size">600ml > </p>
+                                <p class="price">R$21,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Salada Ômega 3','600ml', 21.00, 'pedido1_600ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido1_600ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Salada Ômega 3','600ml',21.00,'pedido1_600ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                            <div class="counter-container">
+                                <p class="size">750ml > </p>
+                                <p class="price">R$24,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Salada Ômega 3','750ml', 24.00, 'pedido1_750ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido1_750ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Salada Ômega 3','750ml',24.00,'pedido1_750ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="images/salada-fitness.jpg" />
+                            <h3>Salada Fitness</h3>
+                            <p class="ingredient">Frango em cubos, ovos de codorna, soja torrada, vagem, batata doce e molho balsâmico </p>
+                            <div class="counter-container">
+                                <p class="size">600ml > </p>
+                                <p class="price">R$21,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Salada Fitness','600ml', 21.00, 'pedido2_600ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido2_600ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Salada Fitness','600ml',21.00,'pedido2_600ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                            <div class="counter-container">
+                                <p class="size">750ml > </p>
+                                <p class="price">R$24,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Salada Fitness','750ml', 24.00, 'pedido2_750ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido2_750ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Salada Fitness','750ml',24.00,'pedido2_750ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="images/salada-leviora.jpg" />
+                            <h3>Salada Leviora</h3>
+                            <p class="ingredient">Frango em cubos, grão de bico, cenoura, molho de iogurte com hortelã </p>
+                            <div class="counter-container">
+                                <p class="size">600ml > </p>
+                                <p class="price">R$21,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Salada Leviora','600ml', 21.00, 'pedido3_600ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido3_600ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Salada Leviora','600ml',21.00,'pedido3_600ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                            <div class="counter-container">
+                                <p class="size">750ml > </p>
+                                <p class="price">R$24,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Salada Leviora','750ml', 24.00, 'pedido3_750ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido3_750ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Salada Leviora','750ml',24.00,'pedido3_750ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col4">
+                            <img src="images/salada-mista.jpg" />
+                            <h3>Salada Mista</h3>
+                            <p class="ingredient">Palmito, milho, vagem e molho de queijo light</p>
+                            <div class="counter-container">
+                                <p class="size">600ml > </p>
+                                <p class="price">R$21,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Salada Mista','600ml', 21.00, 'pedido4_600ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido4_600ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Salada Mista','600ml',21.00,'pedido4_600ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                            <div class="counter-container">
+                                <p class="size">750ml > </p>
+                                <p class="price">R$24,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Salada Mista','750ml', 24.00, 'pedido4_750ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido4_750ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Salada Mista','750ml',24.00,'pedido4_750ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="linha">
+                        <div class="col-sm-3">
+                            <img src="images/salada-redux.jpg" />
+                            <h3>Salada Redux</h3>
+                            <p class="ingredient">Peito de peru, cenoura, penne de vegetais, vagem e molho de queijo light</p>
+                            <div class="counter-container">
+                                <p class="size">600ml > </p>
+                                <p class="price">R$21,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Salada Redux','600ml', 21.00, 'pedido5_600ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido5_600ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Salada Redux','600ml',21.00,'pedido5_600ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                            <div class="counter-container">
+                                <p class="size">750ml > </p>
+                                <p class="price">R$24,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Salada Redux','750ml', 24.00, 'pedido5_750ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido5_750ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Salada Redux','750ml',24.00,'pedido5_750ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="images/salada-chefe.jpg" />
+                            <h3>Salada do Cheff</h3>
+                            <p class="ingredient">Presunto magro, queijo mussarela light, cenoura, milho e molho de ervas finas</p>
+                            <div class="counter-container">
+                                <p class="size">600ml > </p>
+                                <p class="price">R$21,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Salada do Cheff','600ml', 21.00, 'pedido6_600ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido6_600ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Salada do Cheff','600ml',21.00,'pedido6_600ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                            <div class="counter-container">
+                                <p class="size">750ml > </p>
+                                <p class="price">R$24,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Salada do Cheff','750ml', 24.00, 'pedido6_750ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido6_750ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Salada do Cheff','750ml',24.00,'pedido6_750ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="images/salada-leviora2.jpg" />
+                            <h3>Salada Leviora II</h3>
+                            <p class="ingredient">Atum, cenoura, penne de vegetais, azeitona preta e molho de queijo light</p>
+                            <div class="counter-container">
+                                <p class="size">600ml > </p>
+                                <p class="price">R$21,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Salada Leviora II','600ml', 21.00, 'pedido7_600ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido7_600ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Salada Leviora II','600ml',21.00,'pedido7_600ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                            <div class="counter-container">
+                                <p class="size">750ml > </p>
+                                <p class="price">R$24,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Salada Leviora II','750ml', 24.00, 'pedido7_750ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido7_750ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Salada Leviora II','750ml',24.00,'pedido7_750ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col4">
+                            <img src="images/salada-verao.jpg" />
+                            <h3>Salada Verão</h3>
+                            <p class="ingredient">Frango em cubos, milho, cenoura, vagem e molho balsâmico</p>
+                            <div class="counter-container">
+                                <p class="size">600ml > </p>
+                                <p class="price">R$21,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Salada Verão','600ml', 21.00, 'pedido8_600ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido8_600ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Salada Verão','600ml',21.00,'pedido8_600ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                            <div class="counter-container">
+                                <p class="size">750ml > </p>
+                                <p class="price">R$24,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Salada Verão','750ml', 24.00, 'pedido8_750ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido8_750ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Salada Verão','750ml',24.00,'pedido8_750ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="linha">
+                        <div class="col-sm-3">
+                            <img src="images/salada-detox.jpg" />
+                            <h3>Salada Detox</h3>
+                            <p class="ingredient">Pepino, palmito, cenoura, soja torrada e molho iogurte</p>
+                            <div class="counter-container">
+                                <p class="size">600ml > </p>
+                                <p class="price">R$21,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Salada Detox','600ml', 21.00, 'pedido9_600ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido9_600ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Salada Detox','600ml',21.00,'pedido9_600ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                            <div class="counter-container">
+                                <p class="size">750ml > </p>
+                                <p class="price">R$24,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Salada Detox','750ml', 24.00, 'pedido9_750ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido9_750ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Salada Detox','750ml',24.00,'pedido9_750ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="images/salada-fitness2.jpg" />
+                            <h3>Salada Fitness II</h3>
+                            <p class="ingredient">Peito de peru, queijo mussarela light, cenouras, milho e molho de ervas finas</p>
+                            <div class="counter-container">
+                                <p class="size">600ml > </p>
+                                <p class="price">R$21,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Salada Fitness II','600ml', 21.00, 'pedido10_600ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido10_600ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Salada Fitness II','600ml',21.00,'pedido10_600ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                            <div class="counter-container">
+                                <p class="size">750ml > </p>
+                                <p class="price">R$24,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Salada Fitness II','750ml', 24.00, 'pedido10_750ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido10_750ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Salada Fitness II','750ml',24.00,'pedido10_750ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="images/salada-gourmet-parma.jpg" />
+                            <h3>Salada Gourmet Parma</h3>
+                            <p class="ingredient">Presunto parma, queijo mussarela light, cenoura e molho de iogurte com hortelã</p>
+                            <div class="counter-container">
+                                <p class="size">600ml > </p>
+                                <p class="price">R$21,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Salada Gourmet Parma','600ml', 21.00, 'pedido11_600ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido11_600ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Salada Gourmet Parma','600ml',21.00,'pedido11_600ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                            <div class="counter-container">
+                                <p class="size">750ml > </p>
+                                <p class="price">R$24,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Salada Gourmet Parma','750ml', 24.00, 'pedido11_750ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido11_750ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Salada Gourmet Parma','750ml',24.00,'pedido11_750ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col4">
+                            <img src="images/salada-gourmet-brie.jpg" />
+                            <h3>Salada Gourmet Brie</h3>
+                            <p class="ingredient">Queijo brie, nozes, cenoura e molho de ervas</p>
+                            <div class="counter-container">
+                                <p class="size">600ml > </p>
+                                <p class="price">R$21,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Salada Gourmet Brie','600ml', 21.00, 'pedido12_600ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido12_600ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Salada Gourmet Brie','600ml',21.00,'pedido12_600ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                            <div class="counter-container">
+                                <p class="size">750ml > </p>
+                                <p class="price">R$24,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Salada Gourmet Brie','750ml', 24.00, 'pedido12_750ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido12_750ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Salada Gourmet Brie','750ml',24.00,'pedido12_750ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="linha">
+                        <div class="col-sm-3">
+                            <img src="images/macarrao-integral-pesto.jpg" />
+                            <h3>Macarrão integral ao Pesto</h3>
+                            <!--                            <p class="ingredient">Atum, cenoura, milho <br>e molho de iogurte <br>com hortelã </p>-->
+                            <div class="ingredient"></div>
+                            <div class="counter-container">
+                                <p class="size">600ml > </p>
+                                <p class="price">R$21,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Macarrão integral ao Pesto','600ml', 21.00, 'pedido13_600ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido13_600ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Macarrão integral ao Pesto','600ml',21.00,'pedido13_600ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                            <div class="counter-container">
+                                <p class="size">750ml > </p>
+                                <p class="price">R$28,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Macarrão integral ao Pesto','750ml', 28.00, 'pedido13_750ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido13_750ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Macarrão integral ao Pesto','750ml',28.00,'pedido13_750ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="images/macarrao-integral-bolonhesa.jpg" />
+                            <h3>Macarrão integral à Bolonhesa</h3>
+                            <!--                            <p class="ingredient">Atum, cenoura, milho <br>e molho de iogurte <br>com hortelã </p>-->
+                            <div class="ingredient"></div>
+                            <div class="counter-container">
+                                <p class="size">600ml > </p>
+                                <p class="price">R$21,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Macarrão integral à Bolonhesa','600ml', 21.00, 'pedido14_600ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido14_600ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Macarrão integral à Bolonhesa','600ml',21.00,'pedido14_600ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                            <div class="counter-container">
+                                <p class="size">750ml > </p>
+                                <p class="price">R$28,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Macarrão integral à Bolonhesa','750ml', 28.00, 'pedido14_750ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido14_750ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Macarrão integral à Bolonhesa','750ml',28.00,'pedido14_750ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="images/macarrao-integral-shimeji.jpg" />
+                            <h3>Macarrão integral com Shimeji</h3>
+                            <!--                            <p class="ingredient">Atum, cenoura, milho <br>e molho de iogurte <br>com hortelã </p>-->
+                            <div class="ingredient"></div>
+                            <div class="counter-container">
+                                <p class="size">600ml > </p>
+                                <p class="price">R$25,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Macarrão integral com Shimeji','600ml', 25.00, 'pedido15_600ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido15_600ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Macarrão integral com Shimeji','600ml',25.00,'pedido15_600ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                            <div class="counter-container">
+                                <p class="size">750ml > </p>
+                                <p class="price">R$34,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Macarrão integral com Shimeji','750ml', 34.00, 'pedido15_750ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido15_750ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Macarrão integral com Shimeji','750ml',34.00,'pedido15_750ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col4">
+                            <img src="images/creme.jpg" />
+                            <h3>Creme</h3>
+                            <p class="ingredient">(abóbora cabotchan, mandioquinha ou cenoura)</p>
+                            <div class="counter-container">
+                                <p class="size">600ml > </p>
+                                <p class="price">R$18,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Creme','600ml', 18.00, 'pedido16_600ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido16_600ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Creme','600ml',18.00,'pedido16_600ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                            <div class="counter-container">
+                                <p class="size">750ml > </p>
+                                <p class="price">R$21,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Creme','750ml', 21.00, 'pedido16_750ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido16_750ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Creme','750ml',21.00,'pedido16_750ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="linha">
+                        <div class="col-sm-3">
+                            <img src="images/sopa-kids.jpg" />
+                            <h3>Sopa Kids</h3>
+                            <p class="ingredient">(frango, macarrão, cenoura, batata e mandioquinha)</p>
+                            <div class="counter-container">
+                                <p class="size">600ml > </p>
+                                <p class="price">R$18,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Sopa Kids','600ml', 18.00, 'pedido17_600ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido17_600ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Sopa Kids','600ml',18.00,'pedido17_600ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                            <div class="counter-container">
+                                <p class="size">750ml > </p>
+                                <p class="price">R$21,00 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Sopa Kids','750ml', 21.00, 'pedido17_750ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido17_750ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Sopa Kids','750ml',21.00,'pedido17_750ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <img src="images/suco-detox.jpg" />
+                            <h3>Suco Detox</h3>
+                            <p class="ingredient">(garrafa com 200 ml)</p>
+                            <div class="counter-container">
+                                <p class="size">200ml > </p>
+                                <p class="price">R$4,50 </p>
+                                <div class="counter">
+                                    <div class="minus" ng-click="removerItem('Suco Detox','200ml', 4.50, 'pedido18_600ml_qtd')"> - </div>
+                                    <div class="quantity">
+                                        <input type="text" disabled id="pedido18_600ml_qtd" value="0" />
+                                    </div>
+                                    <div class="plus" ng-click="adicionarItem('Suco Detox','200ml',4.50,'pedido18_600ml_qtd')"> + </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 bloco-condicoes">
+                            <div>
+                                <div class="beige-block">Caso queira personalizar sua salada, entre em contato conosco.</div>
+                                <div class="red-block">
+                                    <img src="images/calendar.png" />
+                                    <p><b>Condições especiais</b>
+                                        <br> para kits semanais e mensais.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col4 bloco-descontos">
+                            <div class="green-block">
+                                <div class="green-block-inside">
+                                    <img src="images/percent.png" />
+                                    <p>Ganhe um desconto com a devolução do pote de vidro de <b>R$ 3,00</b> em sua próxima compra.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="summary">
+                <h1>Total do seu pedido</h1>
+                <div>{{valorTotalPedidos | currency:'R$'}}</div>
+                <a href="#" id="enviarPedidoEmail" ng-click="$event.preventDefault();open();">
+                    <img src="images/cart.png" /> Clique e envie seu pedido por e-mail
+                    <p class="msg">{{mensagemSemPedido}}</p>
+                </a>
+            </article>
+        </section>
+        <section>
+            <article class="faca-pedido">
+                <div class="faca-pedido-container">
+                    <p>Faça seu pedido por e-mail, whatsapp ou ligue</p>
+                    <div>
+                        <img src="images/icon-whatsapp.png" /> <a href="tel:11994272049">(11) 99427.2049</a>
+                    </div>
+                    <div>
+                        <img src="images/icon-mail.png" /> <a href="mailto:contato@levioralight.com.br">contato@levioralight.com.br</a>
+                    </div>
+                </div>
+            </article>
+            <article class="img-bottom-container">
+                <img src="images/logo-bottom.png" />
+            </article>
+            <article class="como-funciona">
+                <div class="row">
+                    <div class="col-md-15 col-sm-3">
+                        <img src="images/icon-find.png" />
+                        <h3>Escolha a sua salada!</h3>
+                        <p>Nossas saladas são feitas com ingredientes com todo cuidado. O envase é realizado em potes esterilizados e retornáveis, porque a gente acredita em um mundo sustentável.</p>
+                    </div>
+                    <div class="col-md-15 col-sm-3">
+                        <img src="images/icon-size.png" />
+                        <h3>Qual tamanho do pote?</h3>
+                        <p>Nossas saladas são servidas em potes de dois tamanhos diferentes: 600ml ou 750ml.</p>
+                    </div>
+                    <div class="col-md-15 col-sm-3">
+                        <img src="images/icon-calendar-green.png" />
+                        <h3>Não prefere um Kit?</h3>
+                        <p>Para quem quer economizar e fazer uma alimentação saudável todos os dias, temos a opção de kits semanais e mensais. Entre em contato com a gente para saber mais sobre essas opções.</p>
+                    </div>
+                    <div class="col-md-15 col-sm-3">
+                        <img src="images/icon-maps.png" />
+                        <h3>Pode pedir, a gente entrega!</h3>
+                        <p>É tudo fresquinho, feito no mesmo dia e entregue até você, em casa ou no trabalho.</p>
+                    </div>
+                    <div class="col-md-15 col-sm-3">
+                        <img src="images/icon-shake.png" />
+                        <h3>Misture e bom apetite!</h3>
+                        <p>Todas as saladas são servidas com o molho ideal, portanto, você só precisa mexer bem, abrir e comer.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="equipe">
+                <div class="baloon">
+                    <img src="images/bg-baloon.png" class="bg-baloon" />
+                    <div class="foto-ana">
+                        <img src="images/ana.jpg" />
+                        <div class="infos">
+                            <h3>Ana Priscila Goulart</h3>
+                            <p>PUBLICITÁRIA</p>
+                            <div>
+                                <img src="images/icon-whatsapp-bege.jpg" />
+                                <img src="images/icon-mail-bege.jpg" />
+                                <img src="images/icon-fb-bege.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto-gisele">
+                        <img src="images/gisele.jpg" />
+                        <div class="infos">
+                            <h3>Gisele Cardoso de Toledo</h3>
+                            <p>NUTRICIONISTA</p>
+                            <div>
+                                <img src="images/icon-whatsapp-bege.jpg" />
+                                <img src="images/icon-mail-bege.jpg" />
+                                <img src="images/icon-fb-bege.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="como-comecou">
+                        <h1>Como tudo começou?</h1>
+                        <p>Um belo dia a gente resolveu mudar tudo e acreditar nos nossos sonhos. Foi então que, nós duas, amigas de longa data investimos em tudo o que sempre acreditamos: uma vida simples, saudável e que tinha tudo a ver com a gente.</p>
+                        <p>Uma nutricionista e a outra publicitária. Nasceu então, a Leviora.</p>
+                        <p>Leviora é uma startup de alimentos naturais, orgânicos e integrais. Nosso objetivo é levar até você uma nutrição diária adequada para uma vida equilibrada, saudável, mais feliz e saborosa.</p>
+                    </div>
+                </div>
+            </article>
+            <div class="faixa-container">
+                <img src="images/faixa.png" class="faixa-desenhos" />
+            </div>
+            <article class="img-rodape-container">
+                <div class="row">
+                    <div class="col-sm-4 clear-margin-top">
+                        <label for="email" class="newsletter">Receba nossas promoções
+                            <br>
+                            <input type="email" name="email" id="email" placeholder="Digite seu email aqui" />
+                            <input type="button" id="enviar" name="enviar" value="Enviar" />
+                            <div class="bt-conheca">Conheça nossa Nutricionista</div>
+                        </label>
+
+                    </div>
+                    <div class="col-sm-4  clear-margin-top"><img src="images/logo_rodape.png" /></div>
+                    <div class="col-sm-4  clear-margin-top">
+                        <div class="siga">
+                            <p>Siga-nos</p>
+                            <div>
+                                <img src="images/icon-fb.png" />
+                                <img src="images/icon-pinterest.png" />
+                                <img src="images/icon-instagram.png" />
+                            </div>
+                            <p><a href="tel:11994272049">Nosso contato (11) 99427.2049</a>
+                                <br><a href="mailto:contato@levioralight.com.br">contato@levioralight.com.br</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+        </section>
+    </header>
+
+    <div id="modalConteudo" class="modal fade in" data-interval="false" aria-hidden="false" style="padding-right: 17px; margin-top: 0px;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close video" data-dismiss="modal" aria-hidden="true"><img src="images/section9/close_modal.png" /></button>
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer" style="border-right: 570px solid #eeeeee;">
+                    <div class="alert alert-danger" id="msgErro" style="text-align:left;" role="alert"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

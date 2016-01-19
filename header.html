@@ -35,10 +35,12 @@
 
 
             $('#enviarNews').click(function () {
-                $("#form-news").submit();
+                $("#form-news").submit(enviaDados);
             });
 
-            jQuery('#form-news').submit(function () {
+            function enviaDados() {
+
+
                 $.toast({
                     heading: 'Aguarde',
                     text: 'Seu email está sendo cadastrado!',
@@ -91,7 +93,7 @@
                         });
                     }
                 });
-            });
+            }
         });
     </script>
 </head>

@@ -34,7 +34,7 @@
                     if (data == "failed") {
                         $.toast({
                             heading: 'Erro',
-                            text: 'Ocorreu um erro ao tentar cadastrar, tente novamente!',
+                            text: 'Ocorreu um erro ao enviar mensagem, tente novamente!',
                             icon: 'error',
 
                             position: 'top-center'

@@ -1,4 +1,73 @@
 <?php include("header.html") ?>
+    <script>
+        $(document).ready(function () {
+            $('#enviar').click(function () {
+                $("#form-web").submit(enviaDados);
+            });
+        });
+
+        function enviaDados() {
+            $.toast({
+                heading: 'Aguarde',
+                text: 'Seu email está sendo enviado!',
+                icon: 'info',
+                hideAfter: false,
+                allowToastClose: false,
+                position: 'top-center',
+                stack: 1
+            });
+
+            var dados = {
+                op: "web",
+                quando: $('input[name=quando]:checked', '#form-web').val(),
+                tipo: $('input[name=tipo]:checked', '#form-web').val(),
+                empresa: $("#empresa").val(),
+                nome: $("#nome").val(),
+                telefone: $("#telefone").val(),
+                email: $("#email").val(),
+                cidade: $("#cidade").val(),
+                porque: $("#porque").val()
+            };
+
+            jQuery.ajax({
+                type: "POST",
+                url: "ajax.php",
+                data: dados,
+                success: function (data) {
+                    $.toast().reset('all');
+                    if (data == "failed") {
+                        $.toast({
+                            heading: 'Erro',
+                            text: 'Ocorreu um erro ao enviar mensagem, tente novamente!',
+                            icon: 'error',
+
+                            position: 'top-center'
+                        });
+                    } else {
+                        $('#form-web').trigger("reset");
+                        $.toast({
+                            heading: 'Sucesso!',
+                            text: 'Email enviado com sucesso!',
+                            icon: 'success',
+
+                            position: 'top-center'
+                        });
+                    }
+
+                },
+                fail: function (data) {
+                    $.toast().reset('all');
+                    $.toast({
+                        heading: 'Erro',
+                        text: 'Ocorreu um erro ao enviar mensagem, tente novamente!',
+                        icon: 'error',
+
+                        position: 'top-center'
+                    });
+                }
+            });
+        }
+    </script>
     <img class="banner" src="images/banner_web.jpg" />
     <h2 class="cinza redes-h2">A internet ainda tem muito a ser explorado, e promete muito no mercado de vendas mundial.
 Só no Brasil, já temos mais de 100 milhões de pessoas conectadas, e esse número aumenta a cada dia,
@@ -38,7 +107,7 @@ entrar para o meio virtual</h2>
                     <img src="images/icone_concorrencia.png" />
                     <h1>CONCORRÊNCIA</h1>
                     <p>Se a sua empresa ainda não possui um site institucional, fique atento! A grande maioria das empresas já estão por dentro dessa estratégia. Ou seja, se você não entrar logo, a concorrência estará a um passo a sua frente. Não importa se você é micro, pequeno, médio ou grande empresário: é preciso acompanhar as tendências de mercado.
-</p>
+                    </p>
                 </div>
             </div>
         </article>
@@ -47,48 +116,55 @@ entrar para o meio virtual</h2>
                 <h2 class="txtCenter white">Não espere o seu concorrente ter um website, para fazer o seu. </h2>
                 <h2 class="txtCenter white italic web-naoespere-h2">Uma empresa de sucesso, precisa acompanhar as tendências de mercado e, estar onde o consumidor está. E, com um website bonito, funcional e com informações claras sobre sua empresa e seus produtos, você ganha cada vez mais pontos com o seu cliente. Entre em contato com a gente agora mesmo e não fique para trás.</h2>
             </div>
-            <img class="web-business" src="images/icon_businessman.png"/>
+            <img class="web-business" src="images/icon_businessman.png" />
             <div class="faixa-web2"></div>
         </article>
         <section class="breafing cinza">
-    <h3 class="cinza">RESPONDA AO BRIEFING (FORMULÁRIO) QUE ENTRAREMOS EM CONTATO COM VOCÊ.</h3>
-    <form class="form-registro">
-        <label for="name">Nome completo:</label>
-        <input type="text" id="name" required/>
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" required/>
-        <label for="empresa">Nome da empresa:</label>
-        <input type="text" id="empresa" required/>
-        <div class="briefing-div">
-            <div>
-                <label for="telefone">Telefone:</label>
-                <input type="text" id="telefone" required/>
-                <h3 class="cinza"><strong>INFORMAÇÕES BÁSICAS</strong></h3>
-                <p>Este é um projeto novo ou redesenho?</p>
-                <div class="radiogroup">
-                    <input type="radio" name="tipo" value="novo" checked><label>Projeto novo</label>
-                    <input type="radio" name="tipo" value="redesenho"><label>Redesenho</label>
-                </div><br>
-                <p>Quando precisa do projeto pronto?</p>
-                <div class="radiogroup">
-                    <input type="radio" name="quando" value="1mes" checked><label>Em 1 mês</label>
-                    <input type="radio" name="quando" value="2meses"><label>Em 2 meses</label>
+            <h3 class="cinza">RESPONDA AO BRIEFING (FORMULÁRIO) QUE ENTRAREMOS EM CONTATO COM VOCÊ.</h3>
+            <form class="form-registro" method="post" onsubmit="return false;" id="form-web">
+                <label for="name">Nome completo:</label>
+                <input type="text" id="nome" required/>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" required/>
+                <label for="empresa">Nome da empresa:</label>
+                <input type="text" id="empresa" required/>
+                <div class="briefing-div">
+                    <div>
+                        <label for="telefone">Telefone:</label>
+                        <input type="text" id="telefone" required/>
+                        <h3 class="cinza"><strong>INFORMAÇÕES BÁSICAS</strong></h3>
+                        <p>Este é um projeto novo ou redesenho?</p>
+                        <div class="radiogroup">
+                            <input type="radio" name="tipo" value="novo" checked>
+                            <label>Projeto novo</label>
+                            <input type="radio" name="tipo" value="redesenho">
+                            <label>Redesenho</label>
+                        </div>
+                        <br>
+                        <p>Quando precisa do projeto pronto?</p>
+                        <div class="radiogroup">
+                            <input type="radio" name="quando" value="1 mês" checked>
+                            <label>Em 1 mês</label>
+                            <input type="radio" name="quando" value="2 meses">
+                            <label>Em 2 meses</label>
+                        </div>
+                        <div class="radiogroup">
+                            <input type="radio" name="quando" value="indefinido">
+                            <label>Indefinido</label>
+                            <input type="radio" name="quando" value="urgente">
+                            <label>Urgente</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="cidade">Cidade/Estado:</label>
+                        <input type="text" id="cidade" required/>
+                        <label for="porque">Por que você precisa deste projeto?:</label>
+                        <textarea id="porque"></textarea>
+                        <input type="submit" id="enviar" value="ENVIAR" />
+                    </div>
                 </div>
-                <div class="radiogroup">
-                    <input type="radio" name="quando" value="indefinido"><label>Indefinido</label>
-                    <input type="radio" name="quando" value="urgente"><label>Urgente</label>
-                </div>
-            </div>
-            <div>
-                <label for="cidade">Cidade/Estado:</label>
-                <input type="text" id="cidade" required/>
-                <label for="porque">Por que você precisa deste projeto?:</label>
-                <textarea id="porque"></textarea>
-                <input type="submit" id="enviar" value="ENVIAR"/>
-            </div>
-        </div>
-    </form>
-</section>
+            </form>
+        </section>
 
     </section>
     <?php include("footer.html") ?>
