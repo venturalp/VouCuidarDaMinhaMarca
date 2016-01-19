@@ -729,15 +729,16 @@ footer a:hover {
     text-align: center;
 }
 
-.contato input[type="button"],
-.reg6-container input[type="button"],
-.breafing input[type="button"] {
-    background-color: #595959;
-    border: 1px solid #595959;
-    color: white;
-    font: 900 100% 'Open Sans', sans-serif;
-    padding: 5px 30px 5px 30px;
-    position: relative;
+.contato input[type="submit"],
+.reg6-container input[type="submit"],
+.breafing input[type="submit"] {
+    background-color: #595959 !important;
+    border: 1px solid #595959 !important;
+    color: white !important;
+    font: 900 100% 'Open Sans', sans-serif  !important;
+    padding: 5px 30px 5px 30px  !important;
+    position: relative  !important;
+    width: auto !important;
     left: 50%;
     transform: translateX(-50%);
     -ms-transform: translateX(-50%);
@@ -991,7 +992,7 @@ textarea {
     height: 220px;
 }
 
-.breafing input[type="button"] {
+.breafing input[type="submit"] {
     width: auto !important;
 }
 
@@ -1253,7 +1254,7 @@ textarea {
     height: 200px;
 }
 
-.redes-form input[type="button"] {
+.redes-form input[type="submit"] {
     background-color: #595959;
     border: 1px solid #595959;
     color: white;

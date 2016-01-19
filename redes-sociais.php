@@ -145,7 +145,7 @@
                         </div>
                         <label for="como">Como gostaria que fosse seu plano:</label>
                         <textarea id="como"></textarea>
-                        <input type="button" id="enviar" value="ENVIAR"/>
+                        <input type="submit" id="enviar" value="ENVIAR"/>
                     </form>
                 </div>
             </article>

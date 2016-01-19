@@ -1,67 +1,133 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Vou cuidar da minha marca</title>
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,800,300,300italic,600' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="styles/normalize.css">
-        <link rel="stylesheet" href="styles/bootstrap.min.css"/>
-        <link rel="stylesheet" href="styles/1024.css"/>
-        <link rel="stylesheet" href="styles/1280.css"/>
-        <link rel="stylesheet" href="styles/1366.css"/>
-        <link rel="stylesheet" href="styles/1600.css"/>
-        <link rel="stylesheet" href="styles/style.css"/>
 
-		<script src="scripts/prefixfree.min.js"></script>
-		<script src="scripts/html5shiv-printshiv.min.js"></script>
+<head>
+    <title>Vou cuidar da minha marca</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,800,300,300italic,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/1024.css" />
+    <link rel="stylesheet" href="styles/1280.css" />
+    <link rel="stylesheet" href="styles/1366.css" />
+    <link rel="stylesheet" href="styles/1600.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/jquery.toast.min.css" />
 
-        <meta charset="utf-8">
-        <script src="scripts/jquery-2.1.3.min.js" type="text/javascript"></script>
-        <script src="scripts/jquery.mask.js" type="text/javascript"></script>
-        <script src="scripts/bootstrap.min.js" type="text/javascript"></script>
-        <script type="text/javascript">
-            $(document).ready(function(){
+    <script src="scripts/prefixfree.min.js"></script>
+    <script src="scripts/html5shiv-printshiv.min.js"></script>
 
-                $(window).resize(function(){
-                    if ($(window).width()>1024)
-                        $("#mobMenu").hide();
+    <meta charset="utf-8">
+    <script src="scripts/jquery-2.1.3.min.js" type="text/javascript"></script>
+    <script src="scripts/jquery.mask.js" type="text/javascript"></script>
+    <script src="scripts/bootstrap.min.js" type="text/javascript"></script>
+    <script src="scripts/jquery.toast.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $(window).resize(function () {
+                if ($(window).width() > 1024)
+                    $("#mobMenu").hide();
+            });
+
+            $("#toggleMenu").on("click", function () {
+                $("#mobMenu").slideToggle(500);
+            });
+
+
+            $('#enviarNews').click(function () {
+                $("#form-news").submit();
+            });
+
+            jQuery('#form-news').submit(function () {
+                $.toast({
+                    heading: 'Aguarde',
+                    text: 'Seu email está sendo cadastrado!',
+                    icon: 'info',
+                    hideAfter: false,
+                    allowToastClose: false,
+                    position: 'top-center',
+                    stack: 1
                 });
 
-               $("#toggleMenu").on("click", function(){
-                   $("#mobMenu").slideToggle(500);
-               });
+                var dados = {
+                    op: "newsletter",
+                    email: $("#emailNews").val()
+                };
+
+                jQuery.ajax({
+                    type: "POST",
+                    url: "ajax.php",
+                    data: dados,
+                    success: function (data) {
+                        $.toast().reset('all');
+                        if (data == "failed") {
+                            $.toast({
+                                heading: 'Erro',
+                                text: 'Ocorreu um erro ao tentar cadastrar, tente novamente!',
+                                icon: 'error',
+
+                                position: 'top-center'
+                            });
+                        } else {
+                            $('#form-news').trigger("reset");
+                            $.toast({
+                                heading: 'Sucesso!',
+                                text: 'Email cadastrado com sucesso!',
+                                icon: 'success',
+
+                                position: 'top-center'
+                            });
+                        }
+
+                    },
+                    fail: function (data) {
+                        $.toast().reset('all');
+                        $.toast({
+                            heading: 'Erro',
+                            text: 'Ocorreu um erro ao tentar cadastrar, tente novamente!',
+                            icon: 'error',
+
+                            position: 'bottom-center'
+                        });
+                    }
+                });
             });
-        </script>
-    </head>
-    <body>
-        <div class="geral">
+        });
+    </script>
+</head>
+
+<body>
+    <div class="geral">
         <header>
-            <section class="logo"><a href="index.php"><img src="images/log_header.png"/></a></section>
+            <section class="logo">
+                <a href="index.php"><img src="images/log_header.png" /></a>
+            </section>
             <section class="container-menu">
                 <nav class="icons">
-                    <a href="sobre.php"><img src="images/bt_sobre.png"/></a>
-                    <img src="images/bt_blog.png"/>
-                    <a href="registro.php"><img src="images/bt_registro.png"/></a>
-                    <a href="logo.php"><img src="images/bt_logo.png"/></a>
-                    <a href="redes-sociais.php"><img src="images/bt_social_media.png"/></a>
-                    <a href="web.php"><img src="images/bt_web.png"/></a>
+                    <a href="sobre.php"><img src="images/bt_sobre.png" /></a>
+                    <img src="images/bt_blog.png" />
+                    <a href="registro.php"><img src="images/bt_registro.png" /></a>
+                    <a href="logo.php"><img src="images/bt_logo.png" /></a>
+                    <a href="redes-sociais.php"><img src="images/bt_social_media.png" /></a>
+                    <a href="web.php"><img src="images/bt_web.png" /></a>
                 </nav>
                 <aside class="small-icons">
-                    <img src="images/bt_face.png"/>
-                    <img src="images/bt_linkedin.png"/>
-                    <img src="images/bt_instagram.png"/>
+                    <img src="images/bt_face.png" />
+                    <img src="images/bt_linkedin.png" />
+                    <img src="images/bt_instagram.png" />
                 </aside>
             </section>
         </header>
         <section class="btn-menu">
-            <a href="#" id="toggleMenu"><img src="images/boton_menu.jpg"/></a>
+            <a href="#" id="toggleMenu"><img src="images/boton_menu.jpg" /></a>
         </section>
         <nav class="menu-mobile" id="mobMenu">
             <div class="gr-mobi-menu">
-                <a href="sobre.php"><img src="images/bt_sobre_m.png"/></a>
-                <a href="http://blog_.com"><img src="images/bt_blog_m.png"/></a>
-                <a href="registro.php"><img src="images/bt_registro_m.png"/></a>
-                <a href="logo.php"><img src="images/bt_logo_m.png"/></a>
-                <a href="redes-sociais.php"><img src="images/bt_social_media_m.png"/></a>
-                <a href="web.php"><img src="images/bt_web_m.png"/></a>
+                <a href="sobre.php"><img src="images/bt_sobre_m.png" /></a>
+                <a href="http://blog_.com"><img src="images/bt_blog_m.png" /></a>
+                <a href="registro.php"><img src="images/bt_registro_m.png" /></a>
+                <a href="logo.php"><img src="images/bt_logo_m.png" /></a>
+                <a href="redes-sociais.php"><img src="images/bt_social_media_m.png" /></a>
+                <a href="web.php"><img src="images/bt_web_m.png" /></a>
             </div>
         </nav>

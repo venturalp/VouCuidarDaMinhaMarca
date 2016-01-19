@@ -12,7 +12,7 @@
             <label for="ramo">Ramo de atividade:</label>
             <input type="text" id="ramo" required/>
         </form>
-        <input type="button" id="enviar" value="ENVIAR" />
+        <input type="submit" id="enviar" value="ENVIAR" />
     </div>
 </section>
 <?php include("footer.html") ?>

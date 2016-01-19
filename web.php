@@ -84,7 +84,7 @@ entrar para o meio virtual</h2>
                 <input type="text" id="cidade" required/>
                 <label for="porque">Por que você precisa deste projeto?:</label>
                 <textarea id="porque"></textarea>
-                <input type="button" id="enviar" value="ENVIAR"/>
+                <input type="submit" id="enviar" value="ENVIAR"/>
             </div>
         </div>
     </form>
