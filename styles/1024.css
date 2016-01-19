@@ -402,4 +402,25 @@
         font-size: 30px !important;
         margin-bottom: 10px !important;
     }
+    .jq-icon-info,
+    .jq-icon-error,
+    .jq-icon-success {
+        width: 100% !important;
+        font-size: 30px !important;
+        padding-top: 30px !important;
+        background-size: 5% !important;
+        padding-left: 80px !important;
+        padding-bottom: 30px !important;
+    }
+    .jq-toast-wrap {
+        width: 100% !important;
+        top: 0px !important;
+        left: 0px !important;
+    }
+
+    .jq-toast-single h2 {
+    font-size: 34px !important;
+    margin: 0 0 18px !important;
+
+    }
 }

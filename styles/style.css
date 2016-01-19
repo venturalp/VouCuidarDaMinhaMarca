@@ -13,6 +13,28 @@
     unicode-range: U+0020-2265;
 }
 
+.form-registro input {
+    border-left-style: none;
+    border-top-style: none;
+    border-right-color: #9f9f9f;
+    border-bottom-color: #9f9f9f;
+    background-color: #eeeeee;
+    padding: 5px 2px 5px 2px;
+    color: #9f9f9f;
+    font: 100 20px 'Open Sans', sans-serif;
+}
+
+textarea {
+    border-left-style: none;
+    border-top-style: none;
+    border-right-color: #9f9f9f;
+    border-bottom-color: #9f9f9f;
+    background-color: #eeeeee;
+    padding: 5px 2px 5px 2px;
+    color: #9f9f9f;
+    font: 100 120% 'Open Sans', sans-serif;
+}
+
 h1 {
     font: 900 42px 'Open Sans', sans-serif;
 }
@@ -732,13 +754,13 @@ footer a:hover {
 .contato input[type="submit"],
 .reg6-container input[type="submit"],
 .breafing input[type="submit"] {
-    background-color: #595959 !important;
-    border: 1px solid #595959 !important;
+    background-color: #595959;
+    border: 1px solid #595959;
     color: white !important;
-    font: 900 100% 'Open Sans', sans-serif  !important;
-    padding: 5px 30px 5px 30px  !important;
-    position: relative  !important;
-    width: auto !important;
+    font: 900 100% 'Open Sans', sans-serif;
+    padding: 5px 30px 5px 30px;
+    position: relative;
+    width: auto;
     left: 50%;
     transform: translateX(-50%);
     -ms-transform: translateX(-50%);
@@ -760,28 +782,6 @@ footer a:hover {
 
 .form-registro input {
     margin-bottom: 15px;
-}
-
-.form-registro input {
-    border-left-style: none;
-    border-top-style: none;
-    border-right-color: #9f9f9f;
-    border-bottom-color: #9f9f9f;
-    background-color: #eeeeee;
-    padding: 5px 2px 5px 2px;
-    color: #9f9f9f;
-    font: 100 20px 'Open Sans', sans-serif;
-}
-
-textarea {
-    border-left-style: none;
-    border-top-style: none;
-    border-right-color: #9f9f9f;
-    border-bottom-color: #9f9f9f;
-    background-color: #eeeeee;
-    padding: 5px 2px 5px 2px;
-    color: #9f9f9f;
-    font: 100 120% 'Open Sans', sans-serif;
 }
 
 .logo1 h2 {
@@ -993,7 +993,7 @@ textarea {
 }
 
 .breafing input[type="submit"] {
-    width: auto !important;
+    width: auto;
 }
 
 .breafing {
