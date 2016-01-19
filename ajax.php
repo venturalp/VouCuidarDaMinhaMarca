@@ -1,6 +1,6 @@
 <?php
 if($_POST){
-    $to = 'venturalp@gmail.com';
+    $to = 'bruno@bethadesign.com.br';
 
     if ($_POST['op'] == "newsletter")
     {
@@ -83,10 +83,10 @@ if($_POST){
 
 
         $message = "Nome: " . $nome . "\n";
-        $message = "Email: " . $email . "\n";
-        $message = "Empresa: " . $empresa . "\n";
-        $message = "Telefone: " . $telefone . "\n";
-        $message = "Cidade/Estado: " . $cidade . "\n";
+        $message = $message ."Email: " . $email . "\n";
+        $message = $message ."Empresa: " . $empresa . "\n";
+        $message = $message ."Telefone: " . $telefone . "\n";
+        $message = $message ."Cidade/Estado: " . $cidade . "\n";
         $message = $message . "Mensagem: " . $mensagem . "\n";
 
         $subject = 'Contato - Vou Cuidar da Minha Marca';
